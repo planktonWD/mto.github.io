@@ -32,7 +32,7 @@
 		"ui/components/nav/_trigger.scss",
 		"ui/components/nav/_mobile-nav.scss",
 		"ui/components/nav/_lap-nav.scss",
-		"ui/components/gravityforms.scss",
+		"ui/components/_gravityforms.scss",
 		"ui/components/_theme-my-login.scss",
 		"ui/components/_acf-live-edit.scss",
 		"ui/themes/_mto.scss",
