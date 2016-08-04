@@ -1,0 +1,104 @@
+// Child?
+$child: true;
+$nav-child-indent: $spacing-unit/2;
+
+// Padding
+$nav-padding-top: $spacing-unit/1.2;
+$nav-link-padding: $spacing-unit/4 0;
+
+// Backgrounds, shadows, colors
+$nav-box-shadow: 0 0 5px 5px rgba(0,0,0,0.2);
+$nav-bg: $base-color;
+$nav-link-color: white;
+$nav-highlight-color: $highlight--mute;
+
+// Type
+$nav-font-family: $heading-font;
+$nav-font-size: 12px;
+$nav-line-height: 1.7;
+$text-transform: uppercase;
+
+// Nav Branding?
+$nav-branding: true;
+$nav-branding-width: 100%;
+$nav-branding-height: auto;
+$nav-branding-fill: $base-color;
+
+
+// Position of the nav calculated from global.scss
+@if $trigger-horizontal-position == right {
+    $nav-text-align: right;
+}
+@else {
+    $nav-text-align: left;
+}
+
+.nav {
+  @include vendor(transition, 0.1s all);
+  width: $push-site-wrap-width;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  #{$trigger-horizontal-position}: -250px;
+  bottom: 0;
+  overflow-y: scroll;
+  padding-top: $nav-padding-top;
+  box-shadow: $nav-box-shadow;
+  z-index: 9;
+  background: $nav-bg;
+
+  li {
+    font-family: $nav-font-family;
+    @include font-size($nav-font-size, $nav-line-height);
+    text-transform: $text-transform;
+    width: 100%;
+    list-style: none;
+    text-align: $nav-text-align;
+
+    &.current-menu-item > a {
+        color: $nav-highlight-color;
+    }
+
+    a {
+      display: block;
+      padding: $nav-link-padding;
+      color: $nav-link-color;
+      text-decoration: none;
+      transition: all 0.3s;
+
+      @include attention() {
+          color: $nav-highlight-color;
+      }
+    }
+
+    @if($child == true) {
+
+        ul {
+            margin: 0;
+
+            li a {
+                padding-left: $nav-child-indent;
+                text-transform: capitalize;
+              }
+        }
+    }
+  }
+
+  .nav-branding {
+      width: $nav-branding-width;
+      height: $nav-branding-height;
+
+      color: white;
+
+      @include attention() {
+          color: $nav-highlight-color;
+      }
+
+      /*svg {
+          width: $nav-branding-width;
+          height: $nav-branding-height;
+          fill: $nav-branding-fill;
+      }*/
+
+  }
+}

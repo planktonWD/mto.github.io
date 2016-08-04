@@ -1,0 +1,776 @@
+<!doctype html>
+<html class="sg">
+
+<head>
+  <meta charset="utf-8">
+  <title>Styledown</title>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="profile" href="http://gmpg.org/xfn/11">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Merriweather:400,400italic,700" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="styleguide.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="sg">
+  <div class="sg-menu">
+    <h4 class="sg-title">Your Style Guide Title</h4>
+    <nav class="sg-toc"></nav>
+  </div>
+  <div class="sg-content">
+    <div>
+      <section class="sg-section sg-section-welcome">
+        <h2 id="welcome" class="sg">Welcome</h2>
+        <p class="sg">this styleguide is generated using styledown, grunt and jeckyll and is based on Inuit CSS</p>
+      </section>
+
+      <section class="sg-section sg-section-settings">
+        <h2 id="settings" class="sg">Settings</h2>
+        <p class="sg">start here for global settings and variables</p>
+        <section class="sg-block sg-section-functions">
+          <h3 id="functions" class="sg">Functions</h3>
+          <p class="sg">
+            <span class="epsilon sg">ui/settings/functions.scss</span>
+            <br class="sg">contains simple maths.
+            <code class="sg">quarter($number);</code>
+            <code class="sg">halve($number);</code>
+            <code class="sg">double($number);</code>
+            <code class="sg">quadruple($number);</code>
+          </p>
+        </section>
+        <section class="sg-block sg-section-type-settings">
+          <h3 id="type-settings" class="sg">Type Settings</h3>
+          <p class="sg">
+            <span class="epsilon sg">ui/settings/type-settings.scss</span>
+            <br class="sg">set your base font-size and line-height, heading sizes, font weight variables, font-family variables
+            <br class="sg">
+            <br class="sg">the
+            <code class="sg">$base-font</code>is Merriweather and
+            <code class="sg">$heading-font</code>is pontiac. Merriweather is Google Fonts, pontiac is @font-face
+            <br class="sg">
+            <code class="sg">$base-font-size</code>15px
+            <br class="sg">
+            <code class="sg">$base-line-height</code>29px
+            <br class="sg">
+            <code class="sg">$heading-size-1</code>52px;
+            <br class="sg">
+            <code class="sg">$heading-size-2</code>24px;
+            <br class="sg">
+            <code class="sg">$heading-size-3</code>19px;
+            <br class="sg">
+            <code class="sg">$heading-size-4</code>16px;
+            <br class="sg">
+            <code class="sg">$heading-size-5</code>14px;
+            <br class="sg">
+            <code class="sg">$heading-size-6</code>12px;
+            <br class="sg">
+            <code class="sg">$light</code>200;
+            <code class="sg">$book</code>300;
+            <code class="sg">$heavy</code>700;
+            <code class="sg">$black</code>800;</p>
+        </section>
+        <section class="sg-block sg-section-colors">
+          <div class="sg-text">
+            <h3 id="colors" class="sg">Colors</h3>
+            <p class="sg">
+              <span class="epsilon sg">ui/settings/type-settings.scss</span>
+              <br class="sg">these are the theme variables. note that these swatches are only part of the styleguide css</p>
+          </div>
+          <div class="sg-example">
+            <div class="sg-canvas">
+              <div class="fw clearfix">
+                <p>Theme Colors</p>
+              </div>
+              <div class="swatch swatch-highlight">
+              </div>
+              <div class="swatch swatch-highlight--mute">
+              </div>
+              <div class="swatch swatch-base-color">
+              </div>
+              <div class="swatch swatch-base-color--mute">
+              </div>
+              <div class="fw clearfix">
+                <p>Potential App Colors if needed</p>
+              </div>
+              <div class="swatch swatch-success-light">
+              </div>
+              <div class="swatch swatch-success-dark">
+              </div>
+              <div class="swatch swatch-error-light">
+              </div>
+              <div class="swatch swatch-error-dark">
+              </div>
+              <div class="swatch swatch-warning-light">
+              </div>
+              <div class="swatch swatch-warning-dark">
+              </div>
+              <div class="swatch swatch-info-light">
+              </div>
+              <div class="swatch swatch-info-dark">
+              </div>
+            </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fw clearfix&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Theme Colors<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;swatch swatch-highlight&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;swatch swatch-highlight--mute&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;swatch swatch-base-color&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;swatch swatch-base-color--mute&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fw clearfix&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Potential App Colors if needed<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;swatch swatch-success-light&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;swatch swatch-success-dark&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;swatch swatch-error-light&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;swatch swatch-error-dark&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;swatch swatch-warning-light&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;swatch swatch-warning-dark&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;swatch swatch-info-light&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;swatch swatch-info-dark&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+          </div>
+        </section>
+        <section class="sg-block sg-section-global-variables">
+          <h3 id="global-variables" class="sg">Global Variables</h3>
+          <p class="sg">
+            <span class="epsilon sg">ui/settings/global.scss</span>
+            <br class="sg">These are simply variables that might be used throughout project. A good place to look should you find a variable.</p>
+        </section>
+        <section class="sg-block sg-section-breakpoints">
+          <h3 id="breakpoints" class="sg">Breakpoints</h3>
+          <p class="sg">
+            <span class="epsilon sg">ui/settings/breakpoints.scss</span>
+            <br class="sg">by setting breakpoints here they can be used in conjuction with the layout module and trumps spacing responsive module
+            <br class="sg">
+            <br class="sg">&quot;max-mobile&quot; &quot;screen and (max-width: 500px)&quot;,
+            <br class="sg">
+            <!--"landscape-mobile"    "screen and (min-width: 480px)",<br>-->
+            &quot;two-hands&quot; &quot;screen and (min-width: 500px)&quot;,
+            <br class="sg">&quot;full-nav&quot; &quot;screen and (min-width: 760px)&quot;,
+            <br class="sg">&quot;small-desk&quot; &quot;screen and (min-width: 900px)&quot;,
+            <br class="sg">&quot;desk&quot; &quot;screen and (min-width: 1180px)&quot;,
+            <br class="sg">
+            <!--"huge"          "screen and (min-width: 1400px)"-->
+          </p>
+        </section>
+      </section>
+
+      <section class="sg-section sg-section-tools">
+        <h2 id="tools" class="sg">Tools</h2>
+        <p class="sg">add your tools</p>
+        <section class="sg-block sg-section-mixins">
+          <h3 id="mixins" class="sg">Mixins</h3>
+          <p class="sg">
+            <span class="epsilon sg">ui/tools/mixins.scss</span>
+            <br class="sg">
+            <code class="sg">@mixin bp($mq)</code>pop one of the breakpoints above as the variable
+            <br class="sg">
+            <code class="sg">@mixin font-size($font-size, $line-height: auto)</code>
+            <br class="sg">
+            <code class="sg">@mixin vendor($property, $value...)</code>
+            <br class="sg">
+            <code class="sg">@mixin clearfix</code>
+            <br class="sg">
+            <code class="sg">@mixin attention($self: false)</code>
+            <br class="sg">
+            <code class="sg">@mixin headings($from: 1, $to: 6)</code>
+            <br class="sg">
+            <code class="sg">@mixin loading()</code>pops a loading gif in the background of the container
+            <br class="sg">
+            <code class="sg">@mixin hidden</code>hide from everything
+            <br class="sg">
+            <code class="sg">@mixin visuallyhidden</code>hide only visually</p>
+        </section>
+        <section class="sg-block sg-section-animations">
+          <h3 id="animations" class="sg">Animations</h3>
+          <p class="sg">
+            <span class="epsilon sg">ui/tools/animations.scss</span>
+            <br class="sg">some handy animations. don&apos;t forget to add -webkit-animation too. so far there is..
+            <br class="sg">1) animation: fade-in-and-up 1.0s 1 ease-in-out; which fades element up
+            <br class="sg">
+          </p>
+        </section>
+      </section>
+
+      <section class="sg-section sg-section-generic">
+        <h2 id="generic" class="sg">Generic</h2>
+        <p class="sg">all projects have these don&apos;t really need to tweak them</p>
+        <section class="sg-block sg-section-normalize">
+          <h3 id="normalize" class="sg">Normalize</h3>
+          <p class="sg">
+            <span class="epsilon sg">ui/generic/normalize.scss</span>
+            <br class="sg">v3.0.3 | checked 4th Feb 2016 |
+            <a href="http://necolas.github.io/normalize.css/" class="sg">http://necolas.github.io/normalize.css/</a>
+          </p>
+        </section>
+        <section class="sg-block sg-section-inuit-css-reset">
+          <h3 id="inuit-css-reset" class="sg">Inuit CSS Reset</h3>
+          <p class="sg">
+            <span class="epsilon sg">ui/generic/reset.scss</span>
+            <br class="sg">
+          </p>
+        </section>
+        <section class="sg-block sg-section-box-sizing">
+          <h3 id="box-sizing" class="sg">Box-Sizing</h3>
+          <p class="sg">
+            <span class="epsilon sg">ui/generic/box-sizing.scss</span>
+            <br class="sg">Set the global
+            <code class="sg">box-sizing</code>state to
+            <code class="sg">border-box</code>.
+            <br class="sg">css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+            <br class="sg">paulirish.com/2012/box-sizing-border-box-ftw
+          </p>
+        </section>
+        <section class="sg-block sg-section-shared">
+          <h3 id="shared" class="sg">Shared</h3>
+          <p class="sg">
+            <span class="epsilon sg">ui/generic/shared.scss</span>
+            <br class="sg">styles that are globally shared
+            <br class="sg">
+          </p>
+          <p class="sg">Where
+            <code class="sg">%margin-bottom</code>is concerned,this value will be the same as the base line-height. This allows us to keep a consistent vertical rhythm. As per: csswizardry.com/2012/06/single-direction-margin-declarations
+            <br class="sg">
+          </p>
+          <p class="sg">Where
+            <code class="sg">%margin-left</code>is concerned we want to try and indent certain elements by a consistent amount. Define that amount once,here.</p>
+        </section>
+      </section>
+
+      <section class="sg-section sg-section-base">
+        <h2 id="base" class="sg">Base</h2>
+        <p class="sg">Getting into the nitty gritty of custom styles</p>
+        <section class="sg-block sg-section-high-level-page-styling">
+          <h3 id="high-level-page-styling" class="sg">High Level Page styling</h3>
+          <p class="sg">
+            <span class="epsilon sg">ui/base/page.scss</span>
+            <br class="sg">no need to tweak this</p>
+          <ol class="sg">
+            <li class="sg">Set the default
+              <code class="sg">font-size</code>and
+              <code class="sg">line-height</code>for the entire project, sourced from our default variables. The
+              <code class="sg">font-size</code>is calculated to exist in ems, the
+              <code class="sg">line-height</code>is calculated to exist unitlessly.</li>
+            <li class="sg">Force scrollbars to always be visible to prevent awkward &#x2018;jumps&#x2019; when navigating between pages that do/do not have enough content to produce scrollbars naturally.</li>
+            <li class="sg">Ensure the page always fills at least the entire height of the viewport.</li>
+            <li class="sg">Prevent certain mobile browsers from automatically zooming fonts.</li>
+            <li class="sg">Fonts on OSX will look more consistent with other systems that do not render text using sub-pixel anti-aliasing.</li>
+          </ol>
+        </section>
+        <section class="sg-block sg-section-headings">
+          <div class="sg-text">
+            <h3 id="headings" class="sg">Headings</h3>
+            <p class="sg">
+              <span class="epsilon sg">ui/base/headings.scss</span>
+              <br class="sg">setup all headings using the variables in type-settings.scss plus some helpful classes</p>
+          </div>
+          <div class="sg-example">
+            <div class="sg-canvas">
+              <h1>This is an h1 or .alpha</h1>
+              <h2>This is an h2 or .beta</h2>
+              <h3>This is an h3 or .gamma</h3>
+              <h4>This is an h4 or .delta</h4>
+              <h5>This is an h5 or .epsilon</h5>
+              <h6>This is an h6 or .zeta</h6>
+              <!--p.huge This has a class of .huge-->
+              <p class="big">This has a class of .big</p>
+              <p class="block-heading gamma u-p">This has a class of .block-heading &amp; .gamma &amp; u-p in this case</p>
+              <!--<h2>Normal Heading <span class="light-heading">.light-heading</span></h2>-->
+              <div style="background:black; padding: 10px; padding-bottom: 0;margin-bottom: 22px;">
+                <h3 class="white-heading">this has a class of .white-heading</h3>
+              </div>
+              <!--<h3 class="double-border-heading epsilon allcaps uppercase">Popular</h4>-->
+            </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>This is an h1 or .alpha<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>This is an h2 or .beta<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>This is an h3 or .gamma<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>This is an h4 or .delta<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>This is an h5 or .epsilon<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h6</span>&gt;</span>This is an h6 or .zeta<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span>
+<span class="hljs-comment">&lt;!--p.huge This has a class of .huge--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;big&quot;</span>&gt;</span>This has a class of .big<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;block-heading gamma u-p&quot;</span>&gt;</span>This has a class of .block-heading &amp;amp; .gamma &amp;amp; u-p in this case<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-comment">&lt;!--&lt;h2&gt;Normal Heading &lt;span class=&quot;light-heading&quot;&gt;.light-heading&lt;/span&gt;&lt;/h2&gt;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&quot;background:black; padding: 10px; padding-bottom: 0;margin-bottom: 22px;&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;white-heading&quot;</span>&gt;</span>this has a class of .white-heading<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-comment">&lt;!--&lt;h3 class=&quot;double-border-heading epsilon allcaps uppercase&quot;&gt;Popular&lt;/h4&gt;--&gt;</span></pre>
+          </div>
+        </section>
+        <section class="sg-block sg-section-type">
+          <div class="sg-text">
+            <h3 id="type" class="sg">Type</h3>
+            <p class="sg">
+              <span class="epsilon sg">ui/base/type.scss</span>
+              <br class="sg">set some helpful type specific classes. Also set b and strong for the font you are using.
+              <code class="sg">.heading</code>
+              <code class="sg">.allcaps</code>
+              <code class="sg">.highlight</code>
+              <code class="sg">.small</code>
+              <code class="sg">.subtitle</code>
+              <code class="sg">.text-truncate</code>
+              <code class="sg">.screenreader</code>.screenreader hides things but keeps visible for screenreader</p>
+          </div>
+          <div class="sg-example">
+            <div class="sg-canvas">
+              <p>this is
+                <b>bold with b tag</b>and this is
+                <strong>strong with strong tag</strong>
+              </p>
+              <p class="heading">this has a class of .heading</p>
+              <h2 class="body-text">this is an h2 with .body-text</h2>
+              <p class="allcaps">this has a class of .allcaps</p>
+              <h2 class="nocaps">this is an h3 with .nocaps</h2>
+              <p class="highlight">this has a class of .highlight</p>
+              <p class="small">this has a class of .small</p>
+              <p class="subtitle">this has a class of .subtitle</p>
+              <p class="text-truncate">this has a class of .text-truncate Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur.</p>
+              <p>the below link has .word-wrap</p>
+              <p class="gamma">
+                <a href="" class="word-wrap">Thisisasuperlongemailaddressthatneedstowrap@longlonglonglong.com</a>
+              </p>
+              <p>
+                <!--p this is some overlay text on an image
+<div class="fw u-1/2-small-desk">
+<a href="#" class="secret-link"><img src="/img/stock.jpg"></a>
+<div class="overlay-text u-pr">
+<p class="block-heading u-mb-">Entertainment</p><h3 class="white-heading u-mb- big">Vestibulum Porta Aenean Ullam</h3>
+</div>
+</div>-->
+              </p>
+            </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>this is
+  <span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>bold with b tag<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span>and this is
+  <span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>strong with strong tag<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;heading&quot;</span>&gt;</span>this has a class of .heading<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;body-text&quot;</span>&gt;</span>this is an h2 with .body-text<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;allcaps&quot;</span>&gt;</span>this has a class of .allcaps<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;nocaps&quot;</span>&gt;</span>this is an h3 with .nocaps<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;highlight&quot;</span>&gt;</span>this has a class of .highlight<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;small&quot;</span>&gt;</span>this has a class of .small<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;subtitle&quot;</span>&gt;</span>this has a class of .subtitle<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;text-truncate&quot;</span>&gt;</span>this has a class of .text-truncate Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum
+  nulla sed consectetur.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>the below link has .word-wrap<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;gamma&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;word-wrap&quot;</span>&gt;</span>Thisisasuperlongemailaddressthatneedstowrap@longlonglonglong.com<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--p this is some overlay text on an image
+&lt;div class=&quot;fw u-1/2-small-desk&quot;&gt;
+&lt;a href=&quot;#&quot; class=&quot;secret-link&quot;&gt;&lt;img src=&quot;/img/stock.jpg&quot;&gt;&lt;/a&gt;
+&lt;div class=&quot;overlay-text u-pr&quot;&gt;
+&lt;p class=&quot;block-heading u-mb-&quot;&gt;Entertainment&lt;/p&gt;&lt;h3 class=&quot;white-heading u-mb- big&quot;&gt;Vestibulum Porta Aenean Ullam&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;--&gt;</span></pre>
+          </div>
+        </section>
+        <section class="sg-block sg-section-links">
+          <div class="sg-text">
+            <h3 id="links" class="sg">Links</h3>
+            <p class="sg">
+              <span class="epsilon sg">ui/base/links.scss</span>
+              <br class="sg">general text links.
+              <code class="sg">.secret-link</code>inherits the color but hover effect is the same</p>
+          </div>
+          <div class="sg-example">
+            <div class="sg-canvas">
+              <a href="#">normal link</a>&#xA0;this is
+              <a href="#" class="secret-link">secret hover me</a>
+              <p>the ul below has .secret-links</p>
+              <ul class="secret-links">
+                <li>
+                  <a href="f">link</a>
+                </li>
+                <li>
+                  <a href="f">link</a>
+                </li>
+                <li>
+                  <a href="f">link</a>
+                </li>
+                <li>
+                  <a href="f">link</a>
+                </li>
+              </ul>
+            </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>normal link<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>&amp;nbsp;this is
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;secret-link&quot;</span>&gt;</span>secret hover me<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>the ul below has .secret-links<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;secret-links&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;f&quot;</span>&gt;</span>link<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;f&quot;</span>&gt;</span>link<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;f&quot;</span>&gt;</span>link<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;f&quot;</span>&gt;</span>link<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+          </div>
+        </section>
+        <section class="sg-block sg-section-images">
+          <h3 id="images" class="sg">Images</h3>
+          <p class="sg">
+            <span class="epsilon sg">ui/base/images.scss</span>
+            <br class="sg">all images are responsive, no classes needed .social svg are tweaked in size @example
+            <div class="fw sg">
+              <img src="http://placehold.it/1000x300" class="sg">
+            </div>
+            <div class="max-50 sg">
+              <img src="http://placehold.it/1000x300" class="sg">
+              <br class="sg">
+              <p class="sg">this image is set to .max-50</p>
+            </div>
+          </p>
+          <p class="sg">.little-svg // .svg--white // .full-nav-svg--white</p>
+          <svg class="little-svg sg">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/svg-defs.svg#shape-lightbox" class="sg">
+          </svg>
+          <br class="sg">
+          <div style="background: black; padding: 20px; float: left; width: 100%;" class="sg">
+            <svg class="little-svg svg--white sg">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/svg-defs.svg#shape-lightbox" class="sg">
+            </svg>
+          </div>
+          <br class="sg">
+          <br class="sg">
+          <a href="/img/svg-defs-demo.html" class="sg">SVG defs demo</a>
+          <p class="sg"></p>
+        </section>
+        <section class="sg-block sg-section-backgrounds">
+          <div class="sg-text">
+            <h3 id="backgrounds" class="sg">Backgrounds</h3>
+            <p class="sg">
+              <span class="epsilon sg">ui/base/backgrounds.scss</span>
+              <br class="sg">these handy backgrounds</p>
+          </div>
+          <div class="sg-example">
+            <div class="sg-canvas">
+              <p class="fw u-p bg-off-white">.bg-off-white</p>
+              <p class="fw u-p bg-highlight">.bg-highlight</p>
+              <p class="fw u-p bg-base-color">.bg-base-color</p>
+              <p class="fw u-p bg-secondary-color">.bg-secondary-color</p>
+              <p class="fw u-p bg-tertiary-color">.bg-tertiary-color</p>
+              <p class="fw u-p bg-quaternary-color">.bg-quaternary-color</p>
+              <p class="fw u-p bg-quinternary-color">.bg-quinternary-color</p>
+              <p class="fw u-p bg-black">.bg-black</p>
+              <p class="fw u-p bg-white">.bg-white</p>
+            </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fw u-p bg-off-white&quot;</span>&gt;</span>.bg-off-white<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fw u-p bg-highlight&quot;</span>&gt;</span>.bg-highlight<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fw u-p bg-base-color&quot;</span>&gt;</span>.bg-base-color<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fw u-p bg-secondary-color&quot;</span>&gt;</span>.bg-secondary-color<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fw u-p bg-tertiary-color&quot;</span>&gt;</span>.bg-tertiary-color<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fw u-p bg-quaternary-color&quot;</span>&gt;</span>.bg-quaternary-color<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fw u-p bg-quinternary-color&quot;</span>&gt;</span>.bg-quinternary-color<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fw u-p bg-black&quot;</span>&gt;</span>.bg-black<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fw u-p bg-white&quot;</span>&gt;</span>.bg-white<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+          </div>
+        </section>
+        <section class="sg-block sg-section-misc-elements">
+          <div class="sg-text">
+            <h3 id="misc-elements" class="sg">Misc Elements</h3>
+            <p class="sg">
+              <span class="epsilon sg">ui/misc-elements.scss</span>
+              <br class="sg">any elements that need specific styling</p>
+          </div>
+          <div class="sg-example">
+            <div class="sg-canvas">
+              <hr>
+
+              <!--<hr class="mini-hr">-->
+
+              <!--<hr class="mini-hr aligncenter">-->
+              <div class="bg-highlight u-p">
+                <hr class="white-hr">
+                <p>this hr has .white-hr</p>
+              </div>
+            </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">hr</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!--&lt;hr class=&quot;mini-hr&quot;&gt;--&gt;</span>
+
+<span class="hljs-comment">&lt;!--&lt;hr class=&quot;mini-hr aligncenter&quot;&gt;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bg-highlight u-p&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">hr</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;white-hr&quot;</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>this hr has .white-hr<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+          </div>
+        </section>
+        <section class="sg-block sg-section-lists">
+          <div class="sg-text">
+            <h3 id="lists" class="sg">Lists</h3>
+            <p class="sg">
+              <span class="epsilon sg">ui/base/lists.scss</span>
+              <br class="sg">some handy list styles,
+              <code class="sg">.block-list</code>&#xA0;
+              <code class="sg">.inline-list</code>&#xA0;
+              <code class="sg">.stack-list</code>
+            </p>
+          </div>
+          <div class="sg-example">
+            <div class="sg-canvas">
+              <h5 class="u-mb0">basic</h5>
+              <ul>
+                <li>example one</li>
+                <li>basic</li>
+                <li>example one</li>
+                <li>example one</li>
+                <li>example one</li>
+              </ul>
+              <h5 class="u-mb0">.block-list</h5>
+              <ul class="block-list">
+                <li>.block-list</li>
+                <li>basic</li>
+                <li>example one</li>
+                <li>example one</li>
+                <li>example one</li>
+              </ul>
+              <h5 class="u-mb0">.inline-list</h5>
+              <ul class="inline-list">
+                <li>.inline-list</li>
+                <li>basic</li>
+                <li>example one</li>
+                <li>example one</li>
+                <li>example one</li>
+              </ul>
+              <br>
+              <h5 class="u-mb0">.stack-list</h5>
+              <ul class="stack-list">
+                <li>.stack-list</li>
+                <li>basic</li>
+                <li>example one</li>
+                <li>example one</li>
+                <li>example one</li>
+              </ul>
+              <h5 class="u-mb0">.stack-list .stack-list--padded-links</h5>
+              <ul class="stack-list stack-list--padded-links">
+                <li>
+                  <a href="">link</a>
+                </li>
+                <li>
+                  <a href="">link</a>
+                </li>
+                <li>
+                  <a href="">link</a>
+                </li>
+                <li>
+                  <a href="">link</a>
+                </li>
+              </ul>
+            </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;u-mb0&quot;</span>&gt;</span>basic<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>example one<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>basic<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>example one<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>example one<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>example one<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;u-mb0&quot;</span>&gt;</span>.block-list<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;block-list&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>.block-list<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>basic<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>example one<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>example one<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>example one<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;u-mb0&quot;</span>&gt;</span>.inline-list<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;inline-list&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>.inline-list<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>basic<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>example one<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>example one<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>example one<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">br</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;u-mb0&quot;</span>&gt;</span>.stack-list<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;stack-list&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>.stack-list<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>basic<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>example one<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>example one<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>example one<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;u-mb0&quot;</span>&gt;</span>.stack-list .stack-list--padded-links<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;stack-list stack-list--padded-links&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span>&gt;</span>link<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span>&gt;</span>link<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span>&gt;</span>link<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span>&gt;</span>link<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+          </div>
+        </section>
+      </section>
+
+      <section class="sg-section sg-section-objects">
+        <h2 id="objects" class="sg">Objects</h2>
+        <p class="sg">not quite components</p>
+        <section class="sg-block sg-section-layout">
+          <h3 id="layout" class="sg">Layout</h3>
+          <p class="sg">
+            <span class="epsilon sg">ui/objects/layout.scss</span>
+            <br class="sg">The inuitcss layout system uses
+            <code class="sg">box-sizing: border-box;</code>and
+            <code class="sg">display: inline-block;</code>to create an extremely powerful, flexible alternative to the traditional grid system. Combine the layout items with the widths found in
+            <code class="sg">trumps.widths</code>.
+            <code class="sg">.layout</code>is the container and
+            <code class="sg">.layout__item</code>is the grid elements. Just add
+            <code class="sg">.u-1/2</code>to the
+            <code class="sg">.layout__item</code>!!MAKE SURE WHITE SPACE IS CLEARED</p>
+        </section>
+        <section class="sg-block sg-section-buttons">
+          <div class="sg-text">
+            <h3 id="buttons" class="sg">Buttons</h3>
+            <p class="sg">very simple</p>
+          </div>
+          <div class="sg-example">
+            <div class="sg-canvas">
+              <a href="" class="button">Button</a>
+              <a href="" class="button button--secondary">.button .button--secondary</a>
+              <!--<a href="" class="button button--tertiary">.button .button--tertiary</a>-->
+              <!--<a href="" class="button--ghost">.button--ghost </a>-->
+              <!--<a href="" class="button button--tiny">.button .button--tiny</a>-->
+              <a href="" class="button button--big">.button .button--big</a>
+              <div style="background:black;" class="u-p u-mb">
+                <div class="button--white">.button--white</div>
+              </div>
+              <!--<div style="background:black; position: relative" class="u-p"><p>&nbsp;</p><div class="button--white button--app">.button--white button--app</div></div>-->
+            </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button button--secondary&quot;</span>&gt;</span>.button .button--secondary<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-comment">&lt;!--&lt;a href=&quot;&quot; class=&quot;button button--tertiary&quot;&gt;.button .button--tertiary&lt;/a&gt;--&gt;</span>
+<span class="hljs-comment">&lt;!--&lt;a href=&quot;&quot; class=&quot;button--ghost&quot;&gt;.button--ghost &lt;/a&gt;--&gt;</span>
+<span class="hljs-comment">&lt;!--&lt;a href=&quot;&quot; class=&quot;button button--tiny&quot;&gt;.button .button--tiny&lt;/a&gt;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button button--big&quot;</span>&gt;</span>.button .button--big<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&quot;background:black;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;u-p u-mb&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button--white&quot;</span>&gt;</span>.button--white<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-comment">&lt;!--&lt;div style=&quot;background:black; position: relative&quot; class=&quot;u-p&quot;&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;div class=&quot;button--white button--app&quot;&gt;.button--white button--app&lt;/div&gt;&lt;/div&gt;--&gt;</span></pre>
+          </div>
+        </section>
+        <section class="sg-block sg-section-header">
+          <div class="sg-text">
+            <h3 id="header" class="sg">Header</h3>
+            <p class="sg">
+              <span class="epsilon sg">ui/objects/header.scss</span>
+              <br class="sg">The site header styles. Additional options for .White and .Black text on the header tag</p>
+          </div>
+          <div class="sg-example">
+            <div class="sg-canvas">
+              <header class="wrapper text-center u-pt+ u-pb">
+                <h1>NZ Musicians</h1>
+                <h2 class="body-text gamma nocaps">
+                  <em>Discover. Share. Collaborate.
+                    <br>#nzmusicians</em>
+                </h2>
+                <p>
+                  <a href="" class="button--secondary u-mr--">Button</a>
+                  <a class="button--white u-ml--">.button--white</a>
+                </p>
+              </header>
+            </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">header</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;wrapper text-center u-pt+ u-pb&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>NZ Musicians<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;body-text gamma nocaps&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>Discover. Share. Collaborate.
+      <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>#nzmusicians<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button--secondary u-mr--&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button--white u-ml--&quot;</span>&gt;</span>.button--white<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">header</span>&gt;</span></pre>
+          </div>
+        </section>
+      </section>
+
+      <section class="sg-section sg-section-components">
+        <h2 id="components" class="sg">Components</h2>
+        <p class="sg">THEMES</p>
+      </section>
+
+      <h1 id="trumps" class="sg">TRUMPS</h1>
+      <p class="sg">A series of width helper classes that you can use to size things like grid systems. Classes can take a fraction-like format (e.g.
+        <code class="sg">.u-2/3</code>) or a spoken- word format (e.g.
+        <code class="sg">.u-2-of-3</code>). Use these in your markup:</p>
+      <div class="u-7/12 sg">
+
+        <p class="sg">Responsive width classes based on your responsive settings.</p>
+        <p class="sg">Margin and padding helper classes. Use these to tweak layout on a micro level.
+        </p>
+        <p class="sg">
+          <code class="sg">.(m|p)(t|r|b|l|h|v)(-|+|0) {}</code>= margin/padding top/right/bottom/left/horizontal/vertical less/more/none</p>
+        <p class="sg">Margin helper classes.</p>
+        <p class="sg">Add margins.</p>
+        <p class="sg">Add tiny margins.</p>
+        <p class="sg">Add small margins.</p>
+        <p class="sg">Add large margins.</p>
+        <p class="sg">Add huge margins.</p>
+        <p class="sg">Remove margins.</p>
+        <p class="sg">Negative margins.</p>
+        <p class="sg">Padding helper classes.</p>
+        <p class="sg">Add paddings.</p>
+        <p class="sg">Add small paddings.</p>
+        <p class="sg">Add large paddings.</p>
+        <p class="sg">Add huge paddings.</p>
+        <p class="sg">Remove paddings.</p>
+        <p class="sg">Margin and padding helper classes. Use these to tweak layout on a micro level.
+        </p>
+        <p class="sg">
+          <code class="sg">.(m|p)(t|r|b|l|h|v)(-|+|0) {}</code>= margin/padding top/right/bottom/left/horizontal/vertical less/more/none</p>
+        <p class="sg">Margin helper classes.</p>
+        <p class="sg">Add margins.</p>
+        <p class="sg">Add tiny margins.</p>
+        <p class="sg">Add small margins.</p>
+        <p class="sg">Add large margins.</p>
+        <p class="sg">Add huge margins.</p>
+        <p class="sg">Negative margins.</p>
+        <p class="sg">Padding helper classes.</p>
+        <p class="sg">Add paddings.</p>
+        <p class="sg">Add large paddings.</p>
+        <p class="sg">Add huge paddings.</p>
+        <p class="sg">Remove paddings.</p>
+        <p class="sg">Remove margins.</p>
+        <section class="sg-block sg-section-borders">
+          <div class="sg-text">
+            <h3 id="borders" class="sg">Borders</h3>
+            <p class="sg">
+              <span class="epsilon sg">ui/trumps/borders.scss</span>
+              <br class="sg">Some borders for fast dev</p>
+          </div>
+          <div class="sg-example">
+            <div class="sg-canvas">
+              <p class="u-br">This has .u-br</p>
+            </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;u-br&quot;</span>&gt;</span>This has .u-br<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+          </div>
+        </section>
+
+      </div>
+    </div>
+    <div class="sg-copyright">&#xA9; Your Copyright</div>
+  </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="styleguide.js"></script>
+  <script src="../assets/js/script.miny.js"></script>
+</body>
+
+</html>

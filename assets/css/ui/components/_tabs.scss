@@ -1,0 +1,20 @@
+/**
+* ### Title here
+* <span class="epsilon">ui/...</span> <br>
+*
+*     @example
+*
+*
+*/
+
+.tab__links {
+
+    li {
+        border-bottom: solid 1px #eee;
+    }
+
+    .active a {
+        color: $highlight;
+    }
+
+}

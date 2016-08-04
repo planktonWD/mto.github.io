@@ -1,0 +1,85 @@
+//
+// submenu location/instruments show hide thing
+//
+
+.sub-menu {
+    //position: absolute;
+    //top: $spacing-unit/2;
+    //left: 110%;
+    margin: 0;
+  	list-style: none;
+    float: left;
+    width: 100%;
+    display: none;
+    margin-left: $spacing-unit;
+}
+
+@include bp(full-nav) {
+    .sub-menu {
+        position: absolute;
+        top: $spacing-unit/2;
+        left: 110%;
+        margin-left: 0;
+    }
+}
+
+.menu-city-town_container {
+
+    .parent {
+        position: relative;
+
+        p {
+            padding: $spacing-unit/4 $spacing-unit/2;
+        }
+    }
+
+    a {
+        @include vendor(transition, 0.2s, color);
+    }
+
+    li {
+        margin-bottom: $spacing-unit/2;
+    }
+
+    .current {
+        padding: $spacing-unit/4 $spacing-unit/2;
+        color: white;
+        background: $highlight;
+        margin-bottom: $spacing-unit/2;
+        margin-top: $spacing-unit/2;
+        display: block;
+    }
+}
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+
+
+//
+// .block-heading
+//
+
+.block-heading.two-hands--ml a {
+    padding-left: $spacing-unit !important;
+}
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+
+
+//
+// .plans
+//
+
+.plans .plan__description{
+
+    @include bp(full-nav) {
+        min-height: 23em;
+    }
+}

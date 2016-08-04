@@ -1,0 +1,9 @@
+.fake-lightbox {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    background: white;
+}
+
+// need an overlay just for the white stuff, a take to top and then the content. content must have the close button top right and a close button at bottom. All JS. No JS fallback blhh 

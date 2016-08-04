@@ -1,0 +1,22 @@
+/**
+* ### Borders
+* <span class="epsilon">ui/trumps/borders.scss</span> <br>
+* Some borders for fast dev
+*
+*     @example
+*     <p class="u-br">This has .u-br</p>
+*/
+
+$border-thickness: 2px;
+$border-color: $base-color;
+
+.u-bl {
+    border-right: solid $border-thickness $border-color;
+}
+
+.u-bb {
+    border-bottom: solid $border-thickness $border-color;
+}
+.u-b {
+    border: solid $border-thickness $border-color;
+}

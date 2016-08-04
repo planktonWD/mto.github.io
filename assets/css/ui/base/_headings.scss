@@ -1,0 +1,188 @@
+/**
+* ### Headings
+* <span class="epsilon">ui/base/headings.scss</span> <br>
+* setup all headings using the variables in type-settings.scss plus some helpful classes
+*
+*     @example
+*     h1 This is an h1 or .alpha
+*     h2 This is an h2 or .beta
+*     h3 This is an h3 or .gamma
+*     h4 This is an h4 or .delta
+*     h5 This is an h5 or .epsilon
+*     h6 This is an h6 or .zeta
+*     //p.huge This has a class of .huge
+*     p.big This has a class of .big
+*     p.block-heading.gamma.u-p This has a class of .block-heading &amp; .gamma &amp; u-p in this case
+*     <!--<h2>Normal Heading <span class="light-heading">.light-heading</span></h2>-->
+*     <div style="background:black; padding: 10px; padding-bottom: 0;margin-bottom: 22px;"><h3 class="white-heading">this has a class of .white-heading</h3></div>
+*     <!--<h3 class="double-border-heading epsilon allcaps uppercase">Popular</h4>-->
+*
+*/
+
+$huge: false;
+$big: true;
+$block-heading: true;
+$light-heading: false;
+$white-heading: true;
+$double-border-heading: false;
+
+//
+// All headings plus some custom classes, NO general type stuff please
+//
+
+h1,h2,h3,h4,h5,h6 {
+    color: $base-color;
+    font-weight: $bold;
+    text-transform: uppercase;
+}
+
+h1,
+.alpha,
+%alpha {
+    font-family: $heading-font;
+    @include font-size($heading-size-1, 1.4);
+
+
+    @include bp(max-mobile) {
+        @include font-size($heading-size-2, 1.3);
+    }
+}
+
+h2,
+.beta,
+%beta {
+    font-family: $heading-font;
+    @include font-size($heading-size-2, 1.4);
+
+
+    @include bp(max-mobile) {
+        @include font-size($heading-size-3, 1.6);
+    }
+
+}
+
+h3,
+.gamma,
+%gamma {
+    font-family: $heading-font;
+    @include font-size($heading-size-3, 1.6);
+
+    @include bp(max-mobile) {
+        @include font-size($heading-size-4, 1.6);
+    }
+
+}
+
+h4,
+.delta,
+%delta {
+    font-family: $heading-font;
+    @include font-size($heading-size-4);
+}
+
+h5,
+.epsilon,
+%epsilon {
+    font-family: $heading-font;
+    @include font-size($heading-size-5);
+}
+
+h6,
+.zeta,
+%zeta {
+    @include font-size($heading-size-6);
+    font-family: $heading-font;
+}
+
+@if($huge == true) {
+
+    .huge {
+        @include font-size(45px, 1.3);
+    }
+
+}
+
+
+@if($big == true) {
+
+    .big {
+        font-family: $heading-font;
+        font-weight: $bold;
+        text-transform: uppercase;
+
+        @include bp(max-mobile) {
+            @include font-size($heading-size-2, 1.3);
+        }
+
+        @include bp(two-hands) {
+            @include font-size(50px, 1.3);
+        }
+
+        @include bp(full-nav) {
+            @include font-size(70px, 1.3);
+        }
+    }
+}
+
+@if($block-heading == true) {
+
+    .block-heading {
+        background: $highlight;
+        //text-transform: uppercase;
+        //@include font-size($heading-size-6, 1.7);
+        color: white;
+        //padding: 0 5px;
+        display: block;
+        @include vendor(transition, 0.2s, all);
+
+        @include attention() {
+            background: $highlight--mute;
+        }
+
+        a {
+            color: white;
+            display: block;
+
+            @include attention() {
+                color: white;
+            }
+        }
+    }
+}
+
+@if($light-heading == true) {
+
+    .light-heading {
+        font-family: $base-font;
+        font-weight: 100;
+        color: #bbb;
+    }
+
+}
+
+@if($white-heading == true) {
+
+    .white-heading {
+        color: white;
+    }
+
+}
+
+@if($double-border-heading == true) {
+
+    .double-border-heading {
+        border-bottom: 2px solid $base-color--mute;
+        position: relative;
+        padding-bottom: $spacing-unit/4;
+
+        &:after {
+            position: absolute;
+            content: "";
+            bottom: -2px;
+            left: 0;
+            height: 2px;
+            width: 64px;
+            background: $highlight;
+        }
+    }
+}

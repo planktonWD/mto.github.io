@@ -1,0 +1,93 @@
+// remove the default wordpress css stuff
+.tml {
+    margin: 0 auto;
+
+    p, table {
+        margin-bottom: 0 !important;
+    }
+}
+
+// hide login form on the pending activation page so user can't try to login prior to activating via email
+body form[action="/login/?pending=activation"]  {
+    display: none;
+}
+
+// hide user profile bits that are default in wordpress when showing on the frontend
+.tml-user-admin-bar-front-wrap,
+//.tml-user-login-wrap,
+.tml-first-name-wrap,
+.tml-last-name-wrap,
+.tml-nickname-wrap,
+.tml-display-name-wrap,
+.tml-user-url-wrap,
+.tml-user-description-wrap,
+#your-profile h3,
+.tml-form-table tr,
+.form-table,
+.tml-profile h2,
+.show-password #pass1,
+#pass1-text
+ {
+    display: none;
+}
+
+.tml-form-table {
+
+    width: 100%;
+
+    @include bp(full-nav) {
+        width: 50%;
+    }
+
+    #password, .show-password #pass1-text{
+        display: inline-block;
+        width: 100%;
+
+    }
+
+    label, #pass-strength-result, .wp-pwd, .pw-weak th {
+        text-align: left !important;
+        margin-bottom: $spacing-unit/2 !important;
+    }
+
+
+
+}
+
+// hide the edit profile form just so it can be revelled via JS
+#edit-settings {
+    display: none;
+}
+
+.tml .message, .tml .tml-rememberme-wrap, .tml .error {
+    margin-bottom: $spacing-unit !important;
+}
+
+.tml-rememberme-wrap label {
+	display: inline;
+}
+
+.tml-action-links {
+	margin: 0;
+	list-style: none;
+}
+
+.tml-action-links li {
+	float:left;
+}
+
+.tml-action-links li:last-of-type {
+	float:right;
+}
+
+#resetpassform #pass1-text {display:block;}
+#pass-strength-result, .tml .indicator-hint {margin-bottom: 22px !important;}
+
+.new-register {
+
+    .message {display: none;}
+#wp-submit1 {
+	width: 100%;
+	margin: 22px 0 0 0;
+}
+}

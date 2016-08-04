@@ -1,0 +1,25 @@
+/**
+* ### Breakpoints
+* <span class="epsilon">ui/settings/breakpoints.scss</span> <br>
+* by setting breakpoints here they can be used in conjuction with the layout module and trumps spacing responsive module<br><br>
+* "max-mobile"    "screen and (max-width: 500px)",<br>
+* <!--"landscape-mobile"    "screen and (min-width: 480px)",<br>-->
+* "two-hands"    "screen and (min-width: 500px)",<br>
+* "full-nav"      "screen and (min-width: 760px)",<br>
+* "small-desk"      "screen and (min-width: 900px)",<br>
+* "desk"          "screen and (min-width: 1180px)",<br>
+* <!--"huge"          "screen and (min-width: 1400px)"-->
+*
+*/
+
+$breakpoints: (
+    "max-mobile"    "screen and (max-width: 500px)",
+    //"landscape-mobile"    "screen and (min-width: 480px)",
+    "two-hands"    "screen and (min-width: 500px)",
+    "full-nav"      "screen and (min-width: 760px)",
+    "small-desk"      "screen and (min-width: 900px)",
+    "desk"          "screen and (min-width: 1180px)",
+    //"huge"          "screen and (min-width: 1400px)"
+);
+
+$max-width: 1120px;

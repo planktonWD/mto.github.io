@@ -1,0 +1,87 @@
+/**
+* ### Images
+* <span class="epsilon">ui/base/images.scss</span> <br>
+* all images are responsive, no classes needed
+* .social svg are tweaked in size
+*     @example
+*     <div class="fw"><img src="http://placehold.it/1000x300" /></div>
+*     <div class="max-50"><img src="http://placehold.it/1000x300" /><br /><p>this image is set to .max-50</div>
+*     <p>.little-svg // .svg--white // .full-nav-svg--white</p>
+*     <svg class="little-svg"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/svg-defs.svg#shape-lightbox"></use></svg><br>
+*     <div style="background: black; padding: 20px; float: left; width: 100%;"><svg class="little-svg svg--white"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/svg-defs.svg#shape-lightbox"></use></svg></div>
+*     <br><br><a href="/img/svg-defs-demo.html">SVG defs demo</a>
+*/
+
+img {
+    max-width: 100%; /* [1] */
+    font-style: italic; /* [2] */
+    vertical-align: middle; /* [3] */
+    height: auto;
+}
+
+.tiny-svg {
+    width: 12px;
+    height: 11px;
+    fill: currentColor;
+    margin-left: 5px;
+}
+
+.little-svg {
+    width: 40px;
+    height: 40px;
+    fill: $base-color;
+
+    @include bp(max-mobile) {
+        height: 12px;
+    }
+}
+
+.social-svg {
+    width: 40px;
+    height: 40px;
+    fill: $base-color;
+}
+
+.medium-svg {
+    height: 14px;
+}
+
+.large-svg {
+    height: 20px;
+
+    @include bp(max-mobile) {
+        height: 14px;
+    }
+
+    @include bp(two-hands) {
+        margin-left: 8px;
+    }
+}
+
+
+    .svg--white {
+        fill: white;
+    }
+
+    @include bp(full-nav) {
+        .full-nav-svg--white {
+            fill: white;
+        }
+    }
+
+
+
+
+a .svg-transition {
+    @include vendor(transition, all 0.3s);
+
+    &:hover {
+        fill: $highlight--mute;
+    }
+}
+
+@include bp(two-hands) {
+    .max-50 {
+        max-width: 50%;
+    }
+}

@@ -1,0 +1,43 @@
+/**
+* ### Misc Elements
+* <span class="epsilon">ui/misc-elements.scss</span> <br>
+* any elements that need specific styling
+*
+*     @example
+*     <hr>
+*
+*     <!--<hr class="mini-hr">-->
+*
+*     <!--<hr class="mini-hr aligncenter">-->
+*     <div class="bg-highlight u-p"><hr class="white-hr" /><p>this hr has .white-hr</p></div>
+*/
+
+$hr-style: solid;
+$hr-size: 2px;
+
+$mini-hr: false;
+$white-hr: true;
+
+hr {
+	@extend %margin-bottom;
+	border: none;
+	border-bottom: $hr-style $hr-size $base-color;
+	clear: both;
+}
+
+@if($mini-hr == true) {
+
+    .mini-hr {
+    	width: 50%;
+    	max-width: 300px;
+    }
+
+}
+
+@if($white-hr == true) {
+
+    .white-hr {
+    	border-bottom: $hr-style $hr-size white;
+    }
+
+}

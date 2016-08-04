@@ -1,0 +1,247 @@
+
+
+<article class="u-pt+ fw">
+
+    <h1 class="text-center u-mb+">Music</h1>
+
+    {% assign albums = site.music | sort:"weight" | limit:6 %}
+
+    {% for album_page in albums limit:3 %}
+
+        <div class="gridbox">
+
+            <section class="gridbox__content" style="background-image: url('{{ base.url }}{{album_page.album-thumb}}');">
+
+                <a href="{{album_page.url}}" class="gridbox__link">
+
+                    <h3 class="gridbox__title allcaps">{{album_page.title}}</h3>
+
+                </a>
+
+            </section>
+
+
+        </div>
+
+    {% endfor %}
+
+
+<aside class="text-center u-mt+ fw">
+
+    <a href="/music/all-music" class="button u-mb+">All Music</a>
+
+</aside>
+
+
+</article>
+
+<hr class="mini-hr aligncenter">
+
+
+<article class="fw">
+
+    <div class="wrapper">
+
+        <h1 class="text-center u-mb+ u-mt">Blog</h1>
+
+        <div class="layout tabs">
+
+            <div class="tab__content layout__item u-2/3-full-nav">
+
+
+
+                {% assign blog = site.blog | sort:"weight"  %}
+
+                {% for blog_page in blog reversed %}
+
+                    {% if blog_page.weight < 9999 %}
+
+                        {% if forloop.index == 2 %}
+                             <section class="tab active" id="tab1">
+                        {% endif %}
+                        {% if forloop.index == 3 %}
+                             <section class="tab" id="tab2">
+                        {% endif %}
+                        {% if forloop.index == 4 %}
+                             <section class="tab" id="tab3">
+                        {% endif %}
+                        {% if forloop.index == 5 %}
+                             <section class="tab" id="tab4">
+                        {% endif %}
+                        {% if forloop.index == 6 %}
+                             <section class="tab" id="tab5">
+                        {% endif %}
+
+                        {% if forloop.index < 7 %}
+
+
+                        <p class="subtitle text-center">
+                            {{blog_page.date}}
+                        </p>
+
+                        <h2>{{blog_page.title}}</h2>
+
+
+
+                        {{blog_page.content}}
+
+                    </section>
+
+
+                        {% endif %}
+
+                    {% endif %}
+
+                {% endfor %}
+
+            </div><!--
+
+            --><aside class="layout__item u-1/3-full-nav">
+
+                <ul class="tab__links stack-list u-mt+">
+
+
+                    {% assign blog = site.blog | sort:"weight" %}
+
+                    {% for blog_page in blog reversed %}
+
+                        {% if blog_page.weight < 9999 %}
+
+                        {% if forloop.index == 2 %}
+                            <li class="active" id="#tab1"><a href="#tab1" class="secret-link">{{blog_page.title}}</a></li>
+                        {% endif %}
+                        {% if forloop.index == 3 %}
+                            <li><a href="#tab2" class="secret-link">{{blog_page.title}}</a></li>
+                            {% endif %}
+                            {% if forloop.index == 4 %}
+                            <li><a href="#tab3" class="secret-link">{{blog_page.title}}</a></li>
+                            {% endif %}
+                            {% if forloop.index == 5 %}
+                            <li><a href="#tab4" class="secret-link">{{blog_page.title}}</a></li>
+                            {% endif %}
+                            {% if forloop.index == 6 %}
+                            <li><a href="#tab5" class="secret-link">{{blog_page.title}}</a></li>
+                        {% endif %}
+
+                        {% endif %}
+
+                    {% endfor %}
+
+
+
+
+                </ul>
+            </aside>
+
+        </div>
+
+        <aside class="text-center u-mt+ fw">
+
+            <a href="/blog/all-blog" class="button u-mb+">Whole Dang Blog</a>
+
+        </aside>
+
+    </div>
+
+</article>
+
+<hr class="mini-hr aligncenter">
+
+<article class="fw">
+
+    <h1 class="text-center u-mb+ u-mt">Video</h1>
+
+    {% assign videos = site.videos | sort:"weight" %}
+
+    {% for videos_page in videos limit:3 %}
+
+        <div class="gridbox">
+
+            <section class="gridbox__content" style="background-image: url('{{ base.url }}{{videos_page.video-thumb}}');">
+
+                <a href="{{videos_page.url}}" class="gridbox__link">
+
+                    <h3 class="gridbox__title allcaps">{{videos_page.title}}</h3>
+
+                </a>
+
+            </section>
+
+
+        </div>
+
+    {% endfor %}
+
+<aside class="text-center u-mt+ fw">
+
+    <a href="/videos/all-videos" class="button u-mb+">All Videos</a>
+
+</aside>
+
+
+</article>
+
+<hr class="mini-hr aligncenter">
+
+
+<article class="fw">
+
+    <div class="wrapper">
+
+
+    <h1 class="text-center u-mb+ u-mt">Writing (so far)</h1>
+
+    <div class="layout">
+
+        <section class="layout__item u-1/2-small-desk">
+
+            <h2>Larry Grenadier's Contribution to the Collective Improvisation within the Brad Mehldau Trio</h2>
+
+        </section><!--
+
+        --><section class="layout__item u-1/2-small-desk">
+
+        <p>
+            In 2005 I wrote a my honours dissertation on my favourite acoustic bassist Larry Grenadier.
+        </p>
+
+        <p>
+            This thesis contains transcriptions and analysis of the Art of the Trio series and was a real joy to write and submit.
+        </p>
+
+
+
+
+        </section>
+
+
+
+
+    </div>
+
+    <aside class="text-center fw u-mt">
+
+        <a href="/larry-grenadier-thesis" class="button u-mb+">Larry Grenadier Thesis</a>
+
+    </aside>
+
+
+
+
+
+</div>
+
+</article>
+
+<hr class="mini-hr aligncenter">
+
+<section class="wrapper text-center u-pt u-mb+">
+
+    <h1>Contact</h1>
+    <p class="beta">
+        021 295 4480<br>
+        <a href="mailto:michael@michaelstory.co.nz"  class="word-wrap">michael@michaelstory.co.nz</a>
+    </p>
+
+
+</section><!-- End .wrapper -->

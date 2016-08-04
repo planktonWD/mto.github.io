@@ -1,0 +1,27 @@
+
+// this styling is for the acf-form just tweaking the default styles to suit
+.acf-input-wrap {
+    overflow: visible !important;
+}
+.acf-input-wrap input {
+    height: auto !important;
+}
+
+.acf-fields > .acf-field {
+    //padding-top: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+}
+
+.acf-field .acf-label label {
+    font-size: inherit !important;
+}
+
+.acf-form-submit {
+    margin-top: $spacing-unit/2;
+}
+
+.acf-loading, .acf-spinner {
+    margin: -14px 0 0 9px;
+}

@@ -1,0 +1,25 @@
+#sb_instagram {
+
+    position: relative;
+    padding-top: $spacing-unit;
+
+     .sbi_header_text .sbi_no_bio, .sbi_header_link {
+        text-align: center;
+        margin: 0 !important;
+        width: 100%;
+    }
+
+    .sbi_header_text h3, .sbi_header_text .sbi_bio {
+        margin-top: 10px !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    .sbi_header_img {
+        position: absolute;
+        top: 0;
+        margin: 0 !important;
+        left: 50%;
+        margin-left: -25px !important;
+    }
+}

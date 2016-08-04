@@ -1,0 +1,22 @@
+// hidden so I can use a different button
+.live-edit-button {
+    @include button;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3) !important;
+    width: 100px;
+    margin: 0 auto;
+    padding: 12px !important;
+    background: $quaternary-color !important;
+    border-radius: 0 !important;
+    border-color: $quaternary-color !important;
+    color: white !important;
+
+    @include attention() {
+        background-color: $base-color !important;
+        border-color: $base-color !important;
+    }
+}
+
+.free .live-edit-button {
+    display: block !important;
+    margin: 13px 0 0 0;
+}

@@ -1,0 +1,20 @@
+/**
+* ### Global Variables
+* <span class="epsilon">ui/settings/global.scss</span> <br>
+* These are simply variables that might be used throughout project. A good place to look should you find a variable.
+*
+*/
+
+$radius: 0px; // set to 0 is you don't need
+
+$trigger-horizontal-position: left;
+
+*:focus {
+    outline: 0;
+}
+
+// these are used by inuit so have left in
+$inuit-base-spacing-unit: $base-line-height;
+$base-spacing-unit: $inuit-base-spacing-unit;
+
+$spacing-unit: $base-spacing-unit;

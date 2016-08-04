@@ -1,0 +1,53 @@
+/**
+* ### Flexslider Content
+* <span class="epsilon">ui/components/flexslider-content.scss</span> <br>
+* The branding is positioned centered over the flexslider. In this example the flexslider img are positioned fixed but the flex-bg.gif isn't. It is holding the boxes shape. You can't see any images coz of the position this example is on the page
+*
+*     @example
+*     <div class="flexslider">
+*     <ul class="slides">
+*     <li><img src="/img/banner-db.jpg" /></li>
+*     <li><img src="/img/banner-el.jpg" /></li>
+*     </ul>
+*
+*     <img src="/img/flex-bg.gif" />
+*
+*     <h1 class="site-title">
+*     <span>Michael Story - Christchurch Bassist</span>
+*     <svg class="branding">
+*     <use xlink:href="/img/svg-defs.svg#shape-branding" />
+*     </svg>
+*
+*     </h1>
+*
+*     </div>
+*
+*/
+
+.flexslider h1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 60%;
+    margin-left: -30%;
+    z-index: 999;
+    margin-bottom: 0;
+    margin-top: 13%;
+    -webkit-animation: fade-in-and-up 0.7s 1 ease-in-out;
+    animation: fade-in-and-up 0.7s 1 ease-in-out;
+
+    @include bp(two-hands) {
+        margin-top: 20%;
+    }
+
+    svg {
+        fill: white;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    span {
+        text-indent: -999em;
+        position: absolute;
+    }
+}

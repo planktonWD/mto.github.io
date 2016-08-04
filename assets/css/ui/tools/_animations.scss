@@ -1,0 +1,114 @@
+/**
+* ### Animations
+* <span class="epsilon">ui/tools/animations.scss</span> <br>
+* some handy animations. don't forget to add -webkit-animation too. so far there is..<br>
+* 1) animation: fade-in-and-up 1.0s 1 ease-in-out; which fades element up<br>
+*
+*/
+
+/*
+
+* 1) animation: sk-scaleout 1.0s 1 ease-in-out; which scales in an element<br>
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+
+* 2) animation: subtle-sk-scaleout 1.0s 1 ease-in-out; which scales in an element more subtily<br>
+
+@-webkit-keyframes subtle-sk-scaleout {
+  0% { -webkit-transform: scale(0.7) }
+
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes subtle-sk-scaleout {
+  0% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+*/
+
+/*
+@-webkit-keyframes fade-in-and-up {
+    0% {
+      -webkit-transform: translate(0, 20px);
+      opacity: 0;
+
+    }
+
+    100% {
+      -webkit-transform: translate(0, 0);
+      opacity: 1;
+
+    }
+}
+
+@keyframes fade-in-and-up {
+  0% {
+    transform: translate(0, 20px);
+    opacity: 0;
+
+  }
+
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
+
+  }
+}
+*/
+
+@-webkit-keyframes fade-in-and-up {
+    0% {
+      opacity: 0;
+
+    }
+
+    100% {
+     opacity: 1;
+
+
+    }
+}
+
+@keyframes fade-in-and-up {
+    0% {
+      opacity: 0;
+
+    }
+
+    100% {
+     opacity: 1;
+
+
+    }
+}

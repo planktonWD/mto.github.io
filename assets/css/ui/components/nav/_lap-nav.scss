@@ -1,0 +1,239 @@
+// NAV BRANDING - absolutely positioned
+$nav-branding: true;
+$nav-branding-width: 100%;
+$nav-branding-height: auto;
+$nav-branding-fill: white; // also applied to text
+$nav-branding-top: $spacing-unit/1.4;
+$nav-branding-left: 0;
+
+// CHILD nav
+$child-nav: true;
+
+// EXTRA NAV ELEMENTS
+$extra-nav-elements: false;
+$main-nav-padding-right: 350px;
+$extra-nav-elements-right: $spacing-unit;
+$extra-nav-elements-top: $spacing-unit;
+
+// Alt nav colors
+$alt-nav: false;
+$alt-nav-branding-fill: $base-color;
+
+// #main-menu
+$main-menu-padding-top: 62.5px;
+$main-menu-margin-bottom: 22px;
+
+@include bp(full-nav) {
+
+    .hamburger, label[for="nav-trigger"] {
+        display: none;
+    }
+
+   .nav {
+        /* set these to override the mobile nav */
+        right: 0 !important;
+        //margin-right:-550px;
+        left: auto;
+        bottom: auto;
+        margin-bottom: 0 !important;
+        top: 0px;
+        position: relative;
+        width: 100%;
+        margin: 0;
+        @include vendor(transform, none !important);
+        @include vendor(translate, none !important);
+        padding: 0;
+        background: $base-color;
+        text-align: right;
+        overflow: visible;
+        height: auto;
+        z-index: 99;
+        @include vendor(box-shadow, none);
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        // this is the ul in the nav element
+        #main-menu {
+            padding-top: $main-menu-padding-top;
+            margin-bottom: $main-menu-margin-bottom;
+        }
+
+        li {
+            display: inline-block;
+            position: relative;
+            width: auto;
+            margin-right: $spacing-unit/8;
+            margin-left: $spacing-unit/8;
+            @include vendor(transition, 0.3s);
+            @include font-size(12px, 1.7);
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+
+            /*a {
+                padding: 0;
+                color: white;
+
+                @include attention {
+                    color: $highlight;
+                }
+            }*/
+        }
+
+        @if($nav-branding == true) {
+            .nav-branding {
+                width: $nav-branding-width;
+                height: $nav-branding-height;
+                position: absolute;
+                top: $nav-branding-top;
+                left: $nav-branding-left;
+                //color: $nav-branding-fill !important;
+
+                svg {
+                    width: $nav-branding-width;
+                    height: $nav-branding-height;
+                    fill: $nav-branding-fill;
+
+                }
+            }
+        }
+
+        @if($child-nav == true) {
+
+            .menu-item-has-children  {
+
+                ul {
+                    position: relative;
+                    top: $spacing-unit;
+                    left: 0;
+                    position: absolute;
+                    @include stack-list;
+                    display: none;
+                    background: rgba(0,0,0,0.4);
+                    min-width: 200px;
+
+                    a {text-transform: capitalize;}
+
+                    li {
+                        width: 100%;
+                    }
+                }
+
+                &:hover {
+                    ul {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+    }
+
+    @if($alt-nav == true) {
+
+        .alt-nav .nav {
+
+            .nav-branding {
+                svg {
+                    fill: $alt-nav-branding-fill;
+
+                }
+            }
+
+            li {
+
+                &.current-menu-item, &.current-menu-parent > {
+                    a { color: $base-color; border-bottom: solid 2px $base-color;}
+                }
+
+                a {
+                    color: $base-color;
+
+                    @include attention {
+                        color: $highlight;
+                    }
+                }
+
+            }
+
+            @if($child-nav == true) {
+
+                .menu-item-has-children  {
+
+                    ul {
+                        background: white;
+                    }
+                }
+            }
+
+            @if($extra-nav-elements == true) {
+
+                @include bp(full-nav) {
+
+                    .extra-nav-elements  {
+                        a svg {
+                            fill: $base-color;
+
+                            @include attention {
+                                fill: $secondary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@if($extra-nav-elements == true) {
+
+    @include bp(full-nav) {
+
+        .extra-nav-elements  {
+            position: absolute;
+            top: 4px;
+            right: $extra-nav-elements-right;
+
+            // make them all sit inline
+            .button, a svg {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+@include bp(small-desk) {
+    .nav li {@include font-size(14px, 1.7);}
+}
+
+@include bp(desk) {
+
+    .nav .nav-branding {
+
+        text-align: left;
+        left: $spacing-unit;
+        width: auto;
+    }
+
+    .nav #main-menu {
+        text-align: right;
+        padding-top: 0;
+        margin-bottom: 0;
+    }
+
+    .nav {
+        padding: $spacing-unit/2 0;
+
+        li {
+            margin-right: $spacing-unit/4;
+            margin-left: $spacing-unit/4;
+
+        }
+    }
+
+}

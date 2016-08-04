@@ -1,0 +1,43 @@
+/**
+* ### Flexslider Content
+* <span class="epsilon">ui/components/flexslider-content.scss</span> <br>
+* Super basic example that probably will surfice in most cases
+*
+*     @example
+*     <div class="flexslider">
+*     <ul class="slides">
+*     <li><img src="/img/1.jpg" /></li>
+*     <li><img src="/img/2.jpg" /></li>
+*     </ul>
+*
+*     <div class="flex-content u-p- u-pt0 two-hands-p+ two-hands-pt0 text-center">
+*     <p class="big u-mb0">a world untouched</p>
+*     <p class="gamma body-text"><i>Discover the magic that is North Otago...</i></p>
+*     <p><a href="" class="button--secondary u-mr--">Button</a><a class="button--white u-ml--">.button--white</a></p>
+*
+*     </div>
+*
+*     </div>
+*
+*/
+
+.flex-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    margin-top: $spacing-unit*2;
+    -webkit-animation: fade-in-and-up 0.7s 1 ease-in-out;
+    animation: fade-in-and-up 0.7s 1 ease-in-out;
+    color: white;
+    text-shadow: 0 0 17px rgba(0,0,0,0.5);
+
+    @include bp(full-nav) {
+        margin-top: 20%;
+    }
+
+    .big {
+        opacity: 0.8;
+    }
+}

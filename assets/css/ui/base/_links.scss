@@ -1,0 +1,39 @@
+/**
+* ### Links
+* <span class="epsilon">ui/base/links.scss</span> <br>
+* general text links. `.secret-link` inherits the color but hover effect is the same
+*
+*     @example
+*     <a href="#">normal link </a> &nbsp;this is <a href="#" class="secret-link">secret hover me</a>
+*     <p>the ul below has .secret-links</p>
+*     <ul class="secret-links"><li><a href="f">link</a></li><li><a href="f">link</a></li><li><a href="f">link</a></li><li><a href="f">link</a></li></ul>
+*
+*/
+
+a {
+    text-decoration: none;
+    color: $info-light;
+    @include vendor(transition, 0.2s, all);
+
+    img {
+        @include vendor(transition, 0.2s, all);
+    }
+
+    @include attention() {
+        text-decoration: none;
+        color: $highlight--mute;
+
+        img {
+            filter: gray;
+            @include vendor(filter, grayscale(100%));
+        }
+    }
+}
+
+.secret-link, .secret-links a {
+    color: inherit;
+
+    @include attention() {
+        color: $highlight--mute;
+    }
+}

@@ -1,0 +1,91 @@
+/**
+* ### Lists
+* <span class="epsilon">ui/base/lists.scss</span> <br>
+* some handy list styles, `.block-list` &nbsp; `.inline-list` &nbsp; `.stack-list`
+*
+*     @example
+*     h5.u-mb0 basic
+*     <ul><li>example one</li><li>basic</li><li>example one</li><li>example one</li><li>example one</li></ul>
+*     h5.u-mb0 .block-list
+*     <ul class="block-list"><li>.block-list</li><li>basic</li><li>example one</li><li>example one</li><li>example one</li></ul>
+*     h5.u-mb0 .inline-list
+*     <ul class="inline-list"><li>.inline-list</li><li>basic</li><li>example one</li><li>example one</li><li>example one</li></ul><br/>
+*     h5.u-mb0 .stack-list
+*     <ul class="stack-list"><li>.stack-list</li><li>basic</li><li>example one</li><li>example one</li><li>example one</li></ul>
+*     h5.u-mb0 .stack-list .stack-list--padded-links
+*     <ul class="stack-list stack-list--padded-links"><li><a href="">link</a></li><li><a href="">link</a></li><li><a href="">link</a></li><li><a href="">link</a></li></ul>
+*/
+
+li {
+
+    > ul,
+    > ol {
+        margin-bottom: 0;
+    }
+
+}
+
+ul, ol {
+	list-style-position: inside;
+}
+
+@mixin block-list {
+	margin: 0;
+	padding: 0;
+
+	li {
+		list-style: none;
+		clear: both;
+		display: inline-block;
+	}
+}
+
+.block-list {
+	@include block-list;
+}
+
+////////////////////
+
+@mixin inline-list {
+	margin: 0;
+	padding: 0;
+
+	li {
+		list-style: none;
+		//display: inline-block;
+        float: left;
+		margin-right: $spacing-unit /2;
+	}
+}
+
+.inline-list {
+	@include inline-list;
+}
+
+@mixin stack-list {
+	display: block;
+  	margin-bottom: 0;
+  	margin: 0;
+  	list-style: none;
+    float: left;
+    width: 100%;
+
+    > li {
+        list-style: none;
+      float: left;
+      width: 100%;
+    }
+}
+
+.stack-list {
+	@include stack-list;
+}
+
+    .stack-list--padded-links {
+
+      	a {
+      		padding: $spacing-unit/2;
+      		display: block;
+      	}
+
+    }

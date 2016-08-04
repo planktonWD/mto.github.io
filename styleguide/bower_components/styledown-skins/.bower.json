@@ -1,0 +1,33 @@
+{
+  "name": "styledown-skins",
+  "version": "0.1.1",
+  "homepage": "https://github.com/drakeh/styledown-skins",
+  "authors": [
+    "Drake Hampton <drakehamp@gmail.com>"
+  ],
+  "description": "Skins for Styledown style guides",
+  "main": "dist/*",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "Gruntfile.js"
+  ],
+  "devDependencies": {
+    "jquery.tocify.js": "~1.9.0"
+  },
+  "_release": "0.1.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.1",
+    "commit": "bb3f90a8bfc2b3f075974e7b2ead653ab7198ead"
+  },
+  "_source": "git://github.com/drakeh/styledown-skins.git",
+  "_target": "~0.1.1",
+  "_originalSource": "styledown-skins",
+  "_direct": true
+}

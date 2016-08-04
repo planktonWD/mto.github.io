@@ -1,0 +1,10 @@
+/**
+* ### FitVids
+* <span class="epsilon">ui/components/fit-vids.scss</span> <br>
+* I have simply put a loading gif into the background of .fluid-width-video-wrapper. All other CSS is injected via JS
+*
+*/
+
+.fluid-width-video-wrapper {
+    @include loading;
+}

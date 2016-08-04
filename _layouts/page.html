@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="{{ page.title }} frontpage">
+
+{% include head/site-head.html %}
+
+<body>
+
+    {% include nav/trigger.html %}
+
+    {% include nav/nav.html %}
+
+ <div class="site-wrap clearfix site-wrap--no-banner">
+
+    <div class="bg-highlight u-p white-heading">
+
+        <div class="layout">
+
+            <div class="layout__item u-1/2-full-nav">
+                <p class="gamma u-mb0">
+                    Welcome back Michael Story
+
+                </p>
+                <p>
+                    <small>
+                    You joined on Feb 1st 2016 on the Premium Plan. You have received 18 enquiries.<br  />Please email me with any feedback michael@nzmusicteachers.co.nz
+                </small>
+            </p>
+            </div><!--
+
+            --><div class="layout__item u-1/2-full-nav text-center full-nav-text-right">
+                <a href="" class="button--secondary u-vm u-mr-- u-ml-- ">Upgrade</a>
+                <a href="" class="button--white u-vm u-mr-- u-ml-- ">View my page</a>
+                <a href="" class="button--white u-vm u-mr-- u-ml-- full-nav-mr0">Logout</a>
+                <small class="fw"><a href="" class="u-vm secret-link">Delete my page</a></small>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="main" class="clearfix">
+
+	    {{ content }}
+
+    </div><!-- END #main -->
+
+    {% include footer/footer.html %}
+
+    <div class="overlay">
+
+    </div>
+
+</div><!-- END .page-wrap -->
+
+</body>
+
+</html>

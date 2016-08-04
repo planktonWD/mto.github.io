@@ -1,0 +1,54 @@
+label {
+	display: block;
+	margin-bottom: $spacing-unit/4;
+}
+
+form div {
+	@include vendor(box-sizing, border-box);
+}
+
+button[disabled], html input[disabled] {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+// tagging is used for the tag js plugin, so is .chosen-container for chosen plugin
+input[type="username"], input[type="text"], input[type="password"], input[type="email"], textarea, .chosen-container {
+	background: $off-white;
+	border: solid 1px #ccc;
+	border-radius: 0;
+	padding: 0.9em $spacing-unit/2 0.8em !important; // added !important to override the default acf-form style
+	width: 100%;
+	-webkit-appearance: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	@extend %margin-bottom;
+
+	&::-webkit-input-placeholder { /* WebKit browsers */
+    color:    $base-color--mute;
+	}
+	&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	   color:     $base-color--mute;
+	   opacity:  1;
+	}
+	&::-moz-placeholder { /* Mozilla Firefox 19+ */
+	   color:     $base-color--mute;
+	   opacity:  1;
+	}
+	&:-ms-input-placeholder { /* Internet Explorer 10+ */
+	   color:     $base-color--mute;
+	}
+	}
+
+
+textarea {
+	width: 100%;
+	resize: vertical;
+}
+
+form ul {
+	margin:  0;
+    padding: 0;
+    list-style: none;
+}

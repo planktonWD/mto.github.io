@@ -1,0 +1,53 @@
+/**
+* ### Type Settings
+* <span class="epsilon">ui/settings/type-settings.scss</span> <br>
+* set your base font-size and line-height, heading sizes, font weight variables, font-family variables<br><br>
+* the `$base-font` is Merriweather and `$heading-font` is pontiac. Merriweather is Google Fonts, pontiac is @font-face<br>
+* `$base-font-size` 15px<br>
+* `$base-line-height` 29px<br>
+* `$heading-size-1`  52px;<br>
+* `$heading-size-2`  24px;<br>
+* `$heading-size-3`  19px;<br>
+* `$heading-size-4`  16px;<br>
+* `$heading-size-5`  14px;<br>
+* `$heading-size-6`  12px;<br>
+* `$light` 200;
+* `$book` 300;
+* `$heavy` 700;
+* `$black` 800;
+*/
+
+// High-level base settings.
+$base-font-size:          14px !default;
+$base-line-height:        29px !default;
+
+
+
+//
+//
+//		Type
+//
+//
+
+$heading-size-1:  52px;
+$heading-size-2:  28px;
+$heading-size-3:  19px;
+$heading-size-4:  16px;
+$heading-size-5:  14px;
+$heading-size-6:  12px;
+
+
+
+// FONT WEIGHTS
+
+
+$regular: 400;
+$bold: 700;
+$regular: 500;
+
+
+
+// Font Family
+
+$base-font: 'Merriweather', serif;
+$heading-font: 'Montserrat', sans-serif;

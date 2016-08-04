@@ -1,0 +1,122 @@
+/**
+* ### Backgrounds
+* <span class="epsilon">ui/base/backgrounds.scss</span> <br>
+* these handy backgrounds
+*
+*     @example
+*     <p class="fw u-p bg-off-white">.bg-off-white</p>
+*     <p class="fw u-p bg-highlight">.bg-highlight</p>
+*     <p class="fw u-p bg-base-color">.bg-base-color</p>
+*     <p class="fw u-p bg-secondary-color">.bg-secondary-color</p>
+*     <p class="fw u-p bg-tertiary-color">.bg-tertiary-color</p>
+*     <p class="fw u-p bg-quaternary-color">.bg-quaternary-color</p>
+*     <p class="fw u-p bg-quinternary-color">.bg-quinternary-color</p>
+*     <p class="fw u-p bg-black">.bg-black</p>
+*     <p class="fw u-p bg-white">.bg-white</p>
+
+
+*
+*/
+/*
+	sections with a background image
+*/
+/*
+.gradient {
+	@include vendor(background-size, cover);
+	background-position: top center;
+
+	@include bp(desk) {
+		background-attachment: fixed;
+	}
+}
+
+.gradient:after {
+	position:absolute;
+	top: 0;
+	left: 0;
+	height: 500px;
+	width: 100%;
+	content: "";
+	background: -moz-linear-gradient(top, $ellipse-gradiant-inner 0%, $ellipse-gradiant-outer 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, $ellipse-gradiant-inner), color-stop(100%, $ellipse-gradiant-outer));
+	background: -webkit-linear-gradient(top, $ellipse-gradiant-inner 0%, $ellipse-gradiant-outer 100%);
+	background: -o-linear-gradient(top, $ellipse-gradiant-inner 0%, $ellipse-gradiant-outer 100%);
+	background: -ms-linear-gradient(top, $ellipse-gradiant-inner 0%, $ellipse-gradiant-outer 100%);
+	background: linear-gradient(to bottom, $ellipse-gradiant-inner 0%, $ellipse-gradiant-outer 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$ellipse-gradiant-inner', endColorstr='$ellipse-gradiant-outer', GradientType=0 );
+}
+
+.gradient {
+	.wrapper {
+		z-index: 99;
+	}
+}
+*/
+
+
+
+/*
+	sections with a background color
+*/
+
+.bg-off-white {
+	background: $off-white;
+}
+
+.bg-highlight {
+	background: $highlight;
+}
+
+.bg-base-color {
+    background: $base-color;
+    color: white;
+}
+
+.bg-secondary-color {
+    background: $secondary-color;
+    color: white;
+}
+
+.bg-tertiary-color {
+    background: $tertiary-color;
+    color: white;
+}
+
+.bg-quaternary-color {
+    background: $quaternary-color;
+    color: white;
+}
+
+.bg-quinternary-color {
+    background: $quinternary-color;
+}
+
+.bg-black {
+    background: black;
+    color: white;
+}
+
+.bg-white {
+    background: white;
+}
+
+
+
+/*
+.bg-image--tablet {
+	background-image: url(../../img/tablet.jpg); // fallback for browser with no mulit-background support
+	background-image: linear-gradient(
+      rgba(0,0,0, 0.6),
+      rgba(0,0,0, 0.6)
+    	),
+	  url(../../img/tablet.jpg);
+	@include vendor(background-size, cover);
+	background-position: top center;
+	@include bp(desk) {
+		background-attachment: fixed;
+	}
+	p, li, h1, h2, h3, h4 {
+		color: white;
+	}
+}
+*/

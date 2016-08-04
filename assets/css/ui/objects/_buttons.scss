@@ -1,0 +1,264 @@
+/**
+ * ### Buttons
+ * very simple
+ *
+ *     @example
+ *     <a href="" class="button">Button</a>
+ *     <a href="" class="button button--secondary">.button .button--secondary</a>
+ *     <!--<a href="" class="button button--tertiary">.button .button--tertiary</a>-->
+ *     <!--<a href="" class="button--ghost">.button--ghost </a>-->
+ *     <!--<a href="" class="button button--tiny">.button .button--tiny</a>-->
+ *     <a href="" class="button button--big">.button .button--big</a>
+ *     <div style="background:black;" class="u-p u-mb"><div class="button--white">.button--white</div></div>
+ *     <!--<div style="background:black; position: relative" class="u-p"><p>&nbsp;</p><div class="button--white button--app">.button--white button--app</div></div>-->
+*/
+
+
+// Button Borders
+$btn-radius: $radius;
+$btn-border-width: 1px;
+$btn-border-style: solid;
+$btn-border-color: $highlight;
+
+// Button Padding
+$btn-padding: 9px;
+$btn-vertical-padding: $btn-padding - $btn-border-width;
+$btn-horizontal-padding: double($btn-padding) - $btn-border-width;
+
+// Using svgs in buttons?
+$svg-buttons: false;
+
+// Using tiny buttons?
+$tiny-buttons: false;
+
+// Using White Buttons?
+$white-button: true;
+
+// Using Ghost Buttons?
+$ghost-button: false;
+
+// Using App Button?
+$app-button: true;
+
+// Variations
+$secondary-button: true;
+$tertiary-button: false;
+$big-button: true;
+
+@mixin button {
+	display: inline-block; /* [1] */
+    vertical-align: middle; /* [2] */
+	font-family: $heading-font;
+	font-weight: $regular;
+    text-align: center; /* [4] */
+    border: none; /* [4] */
+    margin:  0; /* [4] */
+    cursor: pointer; /* [5] */
+    overflow: visible; /* [6] */
+    padding: $btn-vertical-padding $btn-horizontal-padding !important; /* [7] */
+    background-color: $highlight;
+	text-transform: uppercase;
+
+    @if($btn-border-width != 0) {
+        border: $btn-border-width $btn-border-style $btn-border-color;
+    }
+
+    @if($btn-radius != 0) {
+        border-radius: $btn-radius;
+    }
+
+
+	margin-bottom: $spacing-unit;
+	@include vendor(transition, 0.3s);
+	@include font-size(14px, 1.7);
+	color: white;
+	position: relative;
+
+	@include attention {
+		text-decoration: none;
+		background-color: $highlight--mute;
+		border-color: $highlight--mute;
+		color:  white;
+	}
+}
+
+.button, .button-primary, input[type="submit"] {
+	@include button;
+
+	@if($svg-buttons == true) {
+
+		// tweak these to suit your svgs
+		svg {
+			width: 6px;
+		    height: 16px;
+		    fill: transparent;
+		    stroke: $highlight;
+		    stroke-width: 2px;
+		    stroke-linecap: round;
+			vertical-align: middle
+		}
+
+		@include attention {
+			svg {
+				stroke: white;
+
+			}
+		}
+
+
+	}
+}
+
+@if($secondary-button == true) {
+
+    .button--secondary {
+        @include button;
+        background-color: $secondary-color !important;
+        border-color: $secondary-color !important;
+        color: white !important;
+
+        @include attention {
+            background-color: $highlight !important;
+            border-color: $highlight !important;
+            color: white !important;
+        }
+
+    }
+}
+
+@if($tertiary-button == true) {
+
+    .button--tertiary {
+        @include button;
+        background-color: $tertiary-color !important;
+        border-color: $tertiary-color !important;
+        color: white;
+
+        @include attention {
+            background-color: $highlight !important;
+            border-color: $highlight !important;
+            color: white;
+        }
+
+    }
+}
+
+@if($big-button == true) {
+
+    .button--big {
+        @include font-size(18px);
+
+    }
+}
+	/* color modifiers */
+
+    @if($white-button == true) {
+
+	.button--white {
+		@include button;
+		background-color: transparent !important;
+		border-color: white !important;
+		color: white;
+
+		@include attention {
+			background-color: white !important;
+			border-color: white !important;
+			color: $highlight !important;
+		}
+
+    }
+		@if($svg-buttons == true) {
+
+			&.button--svg {
+				padding-right: 24px !important;
+			}
+
+			svg {
+				width: 6px;
+			    height: 16px;
+			    fill: transparent;
+			    position: absolute;
+			    top: 0.6em;
+			    right: 8px;
+			    stroke: white;
+			    stroke-width: 2px;
+			    stroke-linecap: round;
+			}
+
+			@include attention {
+				svg {
+					stroke: $highlight;
+
+				}
+			}
+		}
+	}
+
+    @if($ghost-button == true) {
+
+    	.button--ghost {
+    		@include button;
+    		background-color: white;
+    		border-color: $highlight;
+    		color: $highlight;
+
+    		@include attention {
+    			background-color: $highlight--mute;
+    			border-color: $highlight--mute !important;
+    			color: white;
+    		}
+
+    		@if($svg-buttons == true) {
+
+    			&.button--svg {
+    				padding-right: 24px !important;
+    			}
+
+    			svg {
+    				width: 6px;
+    			    height: 16px;
+    			    fill: transparent;
+    			    position: absolute;
+    			    top: 0.6em;
+    			    right: 8px;
+    			    stroke: white;
+    			    stroke-width: 2px;
+    			    stroke-linecap: round;
+    			}
+
+    			@include attention {
+    				svg {
+    					stroke: $highlight;
+
+    				}
+    			}
+    		}
+    	}
+
+    }
+
+    @if($tiny-buttons == true) {
+
+        .button--tiny {
+            padding: $btn-vertical-padding/3 $btn-horizontal-padding;
+        }
+
+    }
+
+    @if($app-button == true) {
+
+        .button--app {
+
+            position: absolute;
+            top: 9px;
+            right: $spacing-unit;
+
+            z-index: 99;
+
+            @include bp(two-hands) {
+                top: 14px;
+            }
+        }
+
+
+    }

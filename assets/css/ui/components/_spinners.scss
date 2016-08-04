@@ -1,0 +1,91 @@
+/**
+* ### Spinners
+* <span class="epsilon">ui/components/spinners.scss</span> <br>
+* taken from http://tobiasahlin.com/spinkit/
+*
+*     @example
+*     <div style="background: black;" class="u-p"><p>There is a spinner here you need to refresh to see</p><i class="orb-spinner"></i></div>
+*
+*/
+/*
+.orb-spinner {
+  width: $spacing-unit*2;
+  height: $spacing-unit*2;
+  //margin: 100px auto; only used in demo
+  background-color: white;
+  display: block; // added coz using inline element instead of div
+
+  border-radius: 100%;
+  -webkit-animation: sk-scaleout 1.0s 2 ease-in-out;
+  animation: sk-scaleout 1.0s 2 ease-in-out;
+  opacity: 0; // added coz I want it to disappear after looping
+
+  // add these as this spinner appears behind the hambuger
+  position: absolute;
+  top: $spacing-unit/3.8;
+  left: $spacing-unit/2.4;
+  z-index: 5000;
+  pointer-events: none;
+
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    -webkit-transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  70% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: scale(0.8);
+    opacity: 0;
+  }
+}
+*/
+/*
+
+ORB SPINNER ORIGINAL
+
+.orb-spinner {
+  width: 60px;
+  height: 60px;
+  margin: 100px auto;
+  background-color: red;
+  display: block; // added coz using inline element instead of div
+
+  border-radius: 100%;
+  -webkit-animation: sk-scaleout 1.0s 2 ease-in-out;
+  animation: sk-scaleout 1.0s 2 ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+*/

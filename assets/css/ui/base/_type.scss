@@ -1,0 +1,200 @@
+/**
+* ### Type
+* <span class="epsilon">ui/base/type.scss</span> <br>
+* set some helpful type specific classes. Also set b and strong for the font you are using. `.heading` `.allcaps` `.highlight` `.small` `.subtitle` `.text-truncate` `.screenreader` .screenreader hides things but keeps visible for screenreader
+*
+*     @example
+*     p this is <b>bold with b tag</b>  and this is <strong> strong with strong tag</strong>
+*     p.heading this has a class of .heading
+*     h2.body-text this is an h2 with .body-text
+*     p.allcaps this has a class of .allcaps
+*     h2.nocaps this is an h3 with .nocaps
+*     p.highlight this has a class of .highlight
+*     p.small this has a class of .small
+*     p.subtitle this has a class of .subtitle
+*     p.text-truncate this has a class of .text-truncate Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur.
+*     p the below link has .word-wrap
+*     <p class="gamma"><a href="" class="word-wrap">Thisisasuperlongemailaddressthatneedstowrap@longlonglonglong.com</a><p>
+*     <!--p this is some overlay text on an image
+*     <div class="fw u-1/2-small-desk">
+*     <a href="#" class="secret-link"><img src="/img/stock.jpg"></a>
+*     <div class="overlay-text u-pr">
+*     <p class="block-heading u-mb-">Entertainment</p><h3 class="white-heading u-mb- big">Vestibulum Porta Aenean Ullam</h3>
+*     </div>
+*     </div>-->
+*
+*
+*/
+
+
+$quote-line: false;
+$quote-marks: false;
+
+$overlay-text: false;
+
+b, strong {
+	font-weight: bold;
+}
+
+//
+//  Some helpful classes
+//
+
+
+.heading {
+    font-family: $heading-font;
+}
+
+.body-text {
+    font-family: $base-font;
+    font-weight: $regular;
+}
+
+.allcaps {
+    text-transform: uppercase;
+}
+
+.nocaps {
+    text-transform: none;
+}
+
+.highlight {
+	color: $highlight !important;
+	fill: $highlight !important;
+}
+
+.small {
+	@include font-size(12px);
+	line-height: 1.4;
+}
+
+.subtitle {
+	opacity: 0.5;
+}
+
+.text-truncate {
+  	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+
+.screenreader {
+  @include visuallyhidden;
+}
+
+.word-wrap {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+@if($overlay-text == true) {
+    .overlay-text {
+        position: absolute;
+        bottom: 0;
+        left: $spacing-unit;
+        pointer-events: none;
+    }
+}
+
+
+/*
+
+.svg-right {
+	position: relative;
+
+	svg {
+		width: 6px;
+	    height: 16px;
+	    stroke-width: 2px;
+	    stroke-linecap: round;
+	    display: inline-block;
+	    vertical-align: text-top;
+	    margin-left: 10px;
+	}
+}
+
+.svg-left {
+	position: relative;
+
+	svg {
+		width: 6px;
+	    height: 16px;
+	    stroke-width: 2px;
+	    stroke-linecap: round;
+	    display: inline-block;
+	    vertical-align: text-top;
+	    margin-right: 10px;
+	}
+}
+
+	.svg--white {
+		fill: transparent;
+		stroke: white;
+	}
+
+	.svg--base {
+		fill: transparent;
+		stroke: $base-color;
+	}
+*/
+
+/*
+
+	Blockquotes
+
+*/
+
+@if($quote-line == true) {
+
+	.quote-line {
+	  position: relative;
+	  margin: $spacing-unit auto;
+	  width: 80%;
+	  @include font-size($heading-size-2);
+	  line-height: 1.3;
+	  padding-left: $spacing-unit;
+	  border-left: 4px solid $highlight;
+
+	  footer {
+		  display: block;
+		  text-align: right;
+		  font-size: 24px;
+		  line-height: 40px;
+		  margin-top: 10px;
+		  text-transform: uppercase;
+		  color: darken(#fff, 15%);
+		  font-weight: 700;
+	  }
+	}
+}
+
+@if($quote-marks == true) {
+
+	.quote-marks {
+	  position: relative;
+	  @include font-size($heading-size-2);
+	  line-height: 1.3;
+
+	  footer {
+	    font-size: 0.6em;
+	    font-weight: 700;
+	    color: darken(#fff, 15%);
+	    float: right;
+		margin-top: 0.6rem;
+
+	    &:before {
+	      content: '\2015';
+	    }
+	  }
+	  &:after {
+	      content: '\201D';
+	      position: absolute;
+	      top: -0.3em;
+	      right: 0;
+	      font-size: 3em;
+	      font-style: italic;
+	      color: darken(#fff, 7%);
+	      z-index: -1;
+	   }
+	}
+}

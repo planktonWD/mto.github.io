@@ -1,0 +1,118 @@
+/**
+* ### GridBox
+* <span class="epsilon">ui/components/gridbox.scss</span> <br>
+* Some boxes with background images, text overlay that link
+*
+*     @example
+*     div.gridbox
+*       <div class="gridbox__content" style="background-image: url('http://img.youtube.com/vi/39ufeusotzs/sddefault.jpg');"></div>
+*       <a href="<?php the_permalink(); ?>" class="gridbox__link">
+*       <h3 class="gridbox__title allcaps"><?php the_title(); ?><span class="small fw"><?php the_field('tagline'); ?></span></h3>
+*       </a>
+*     div.gridbox
+*       <div class="gridbox__content" style="background-image: url('http://img.youtube.com/vi/39ufeusotzs/sddefault.jpg');"></div>
+*       <a href="<?php the_permalink(); ?>" class="gridbox__link">
+*       <h3 class="gridbox__title allcaps"><?php the_title(); ?><span class="small fw"><?php the_field('tagline'); ?></span></h3>
+*       </a>
+*     div.gridbox
+*       <div class="gridbox__content" style="background-image: url('http://img.youtube.com/vi/39ufeusotzs/sddefault.jpg');"></div>
+*       <a href="<?php the_permalink(); ?>" class="gridbox__link">
+*       <h3 class="gridbox__title allcaps"><?php the_title(); ?><span class="small fw"><?php the_field('tagline'); ?></span></h3>
+*       </a>
+*/
+
+.gridbox {
+    position: relative;
+    padding-bottom: 50%;
+    width: 50%;
+    float: left;
+    overflow: hidden;
+
+    span {
+        display: none;
+    }
+
+    @include loading;
+    @include vendor(transition, all 0.1s);
+
+    @include bp(two-hands) {
+        padding-bottom: 33.3333%;
+        width: 33.3333%;
+    }
+
+    @include bp(small-desk) {
+        padding-bottom: 25%;
+        width: 25%;
+    }
+
+
+        .gridbox__content {
+
+            @include vendor(background-size, cover);
+            @include vendor(transition, all 0.1s ease-in-out);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-position: center top;
+
+        }
+
+        .gridbox__link {
+            position: absolute;
+            z-index: 9;
+            //background: rgba(0,0,0,0.1);
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .gridbox__title {
+            z-index: 33333;
+            padding: $spacing-unit*3 $spacing-unit $spacing-unit $spacing-unit;
+            text-align: center;
+            color: #fff;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+            background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+            background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+            background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+            margin: 0;
+        }
+
+
+    &:hover {
+        .gridbox__content {
+
+            -webkit-filter: blur(5px);
+            -moz-filter: blur(5px);
+            -o-filter: blur(5px);
+            -ms-filter: blur(5px);
+            filter: blur(5px);
+        }
+
+        .gridbox__title {
+            bottom: auto;
+            top: 0;
+            padding-top: $spacing-unit;
+            //background: none;
+            padding-bottom: 80%;
+            -webkit-animation: fade-in-and-up 0.6s 1 ease-in-out;
+            animation: fade-in-and-up 0.6s 1 ease-in-out;
+            background: -moz-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%);
+            background: -webkit-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%);
+            background: -o-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%);
+            background: -ms-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%);
+
+            span {
+                display: block;
+            }
+
+        }
+    }
+
+
+}

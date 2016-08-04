@@ -1,0 +1,105 @@
+.clearfix,
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+}
+
+.alignnone {
+    margin-top: 0;
+    @extend %margin-bottom;
+    margin-right: 0;
+    margin-left: 0;
+}
+.aligncenter {
+    display:block;
+    margin-top: 0;
+    @extend %margin-bottom;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+.alignright {
+    float:right;
+    margin-top: 0;
+    @extend %margin-bottom;
+    margin-right: 0;
+    margin-left: $spacing-unit;
+}
+.alignleft {
+    float:left;
+    margin-top: 0;
+    @extend %margin-bottom;
+    margin-right: $spacing-unit;
+    margin-left: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+@include bp(full-nav) {
+
+    .full-nav-text-center {
+        text-align: center;
+    }
+
+    .full-nav-text-right {
+        text-align: right;
+    }
+
+    .full-nav-text-left {
+        text-align: left;
+    }
+}
+
+@include bp(desk) {
+
+    .desk-text-center {
+        text-align: center;
+    }
+
+    .desk-text-right {
+        text-align: right;
+    }
+
+    .desk-text-left {
+        text-align: left;
+    }
+}
+
+.fw {
+    width: 100%;
+    float: left;
+}
+
+.circle {
+    border-radius: 999em;
+}
+
+ /*
+        margin-right: $spacing-unit;
+        display: inline-block;
+        width: auto;
+    }
+}
+
+*/
+@include bp(max-mobile) {
+    .mobile-center {
+        text-align: center !important;
+        margin: 0 auto !important;
+        float: none !important;
+    }
+}

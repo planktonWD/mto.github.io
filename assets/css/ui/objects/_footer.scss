@@ -1,0 +1,16 @@
+.footer {
+
+    background: $base-color;
+    position: relative;
+    z-index: 99;
+    color: white;
+
+    a {
+        color: $highlight--mute;
+
+        @include attention() {
+            color: $highlight;
+        }
+    }
+
+}

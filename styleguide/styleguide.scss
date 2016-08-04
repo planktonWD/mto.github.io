@@ -1,0 +1,36 @@
+$fluid: true;
+
+@import "../assets/css/imports";
+
+@import "skin";
+
+
+/// this is to generate swatches
+.swatch {
+	width:100px;
+	height:100px;
+	position: relative;
+	text-align:center;
+	margin-bottom: $spacing-unit*3;
+	margin-top: $spacing-unit;
+	float: left;
+	margin-right: $spacing-unit;
+	font-size: 10px;
+}
+
+@each $name, $color in $colors {
+
+	.swatch-#{$name} {
+		background:$color;
+
+        &:after {
+			content: "$#{$name}";
+			position: absolute;
+			bottom:-$spacing-unit;;
+			left: 0;
+		}
+	}
+}
+
+
+/////

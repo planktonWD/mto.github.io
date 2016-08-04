@@ -1,0 +1,146 @@
+/**
+* ### Colors
+* <span class="epsilon">ui/settings/type-settings.scss</span> <br>
+* these are the theme variables. note that these swatches are only part of the styleguide css
+*
+*     @example
+*     <div class="fw clearfix"><p>Theme Colors</p></div>
+*     <div class="swatch swatch-highlight">
+*     </div>
+*     <div class="swatch swatch-highlight--mute">
+*     </div>
+*     <div class="swatch swatch-base-color">
+*     </div>
+*     <div class="swatch swatch-base-color--mute">
+*     </div>
+*     <div class="fw clearfix"><p>Potential App Colors if needed</p></div>
+*     <div class="swatch swatch-success-light">
+*     </div>
+*     <div class="swatch swatch-success-dark">
+*     </div>
+*     <div class="swatch swatch-error-light">
+*     </div>
+*     <div class="swatch swatch-error-dark">
+*     </div>
+*     <div class="swatch swatch-warning-light">
+*     </div>
+*     <div class="swatch swatch-warning-dark">
+*     </div>
+*     <div class="swatch swatch-info-light">
+*     </div>
+*     <div class="swatch swatch-info-dark">
+*     </div>
+
+*
+*/
+
+///
+///
+/// please put any new variables into the swatch
+/// collection at bottom of this file and declare in /documentation/settings/colors.html
+///
+///
+
+// MESSAGES
+
+$success-light: #91c53a;
+$success-dark: #60AB1B;
+
+$error-light: #D22525;
+$error-dark: #BD1111;
+
+$warning-light: #FEAE00;
+$warning-dark: #FD8B00;
+
+$info-light: #0096D8;
+$info-dark: #0066C6;
+
+$light-grey: #556D76;
+
+$off-white: rgba(0,0,0,0.04);
+
+// THEME COLORS
+
+/*
+$dark-blue: #082029;
+$mid-blue: #044150;
+$light-blue: #1c6174;
+
+$yellow: #ffa615;
+$orange: #ff8317;
+$blood-orange: #ff6818;
+$red: #e84425;
+*/
+
+$dark-blue: #0D1321;
+$mid-blue: #1D2D44;
+$light-blue: #3E5C76;
+
+$base-text-color:   $dark-blue;
+$base-background-color:	white;
+
+
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+
+
+// USEFUL VARIABLES
+
+$highlight: $mid-blue;
+
+$highlight--mute: $light-blue;
+
+$base-color: $base-text-color;
+
+$base-color--mute: $light-grey;
+
+$secondary-color: $info-light;
+$tertiary-color: $error-dark;
+$quaternary-color: $success-dark;
+$quinternary-color: $info-light;
+
+
+// FORM ELEMENTS
+
+$placeholder: #aaa;
+
+// GRADIENTS
+
+//$ellipse-gradiant-outer: $dark-purple-rgba-trans;
+//$ellipse-gradiant-inner: $dark-purple-rgba;
+
+
+
+$colors: (
+	'success-dark'  : $success-dark,
+	'success-light' : $success-light,
+	'error-light' : $error-light,
+
+	'error-dark' : $error-dark,
+
+	'warning-light' : $warning-light,
+	'warning-dark' : $warning-dark,
+
+	'info-light' : $info-light,
+	'info-dark' : $info-dark,
+
+	'highlight' : $highlight,
+
+	'highlight--mute' : $highlight--mute,
+
+	'base-color': $base-color,
+
+	'base-color--mute' : $base-color--mute,
+
+    'secondary-color' : $secondary-color,
+    'tertiary-color' : $tertiary-color,
+    'quaternary-color' : $quaternary-color,
+
+
+
+
+
+	//'ellipse-gradiant-outer' : $ellipse-gradiant-outer,
+	//'ellipse-gradiant-inner' : $ellipse-gradiant-inner
+);

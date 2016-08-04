@@ -1,0 +1,33 @@
+/**
+* ### Columns
+* <span class="epsilon">ui/components/columns.scss</span> <br>
+* Some columns for ya!
+*
+*     @example
+*     p Below is a ul with .columns
+*     <ul class="columns stack-list">
+*     <li><span class="u-pr">This is a list item</span> <a href="#" class="button button--tiny u-mb0 u-vbase u-vbase">.button--tiny u-mb0 u-vbase</a></li><li><span class="u-pr">This is a list item</span> <a href="#" class="button button--tiny u-mb0 u-vbase">.button--tiny u-mb0 u-vbase</a></li><li><span class="u-pr">This is a list item</span> <a href="#" class="button button--tiny u-mb0 u-vbase">.button--tiny u-mb0 u-vbase</a></li><li><span class="u-pr">This is a list item</span> <a href="#" class="button button--tiny u-mb0 u-vbase">.button--tiny u-mb0 u-vbase</a></li><li><span class="u-pr">This is a list item</span> <a href="#" class="button button--tiny u-mb0 u-vbase">.button--tiny u-mb0 u-vbase</a></li><li><span class="u-pr">This is a list item</span> <a href="#" class="button button--tiny u-mb0 u-vbase">.button--tiny u-mb0 u-vbase</a></li><li><span class="u-pr">This is a list item</span> <a href="#" class="button button--tiny u-mb0 u-vbase">.button--tiny u-mb0 u-vbase</a></li><li><span class="u-pr">This is a list item</span> <a href="#" class="button button--tiny u-mb0 u-vbase">.button--tiny u-mb0 u-vbase</a></li><li><span class="u-pr">This is a list item</span> <a href="#" class="button button--tiny u-mb0 u-vbase">.button--tiny u-mb0 u-vbase</a></li>
+*     </ul>
+*     p Below is a ul with .columns--slim
+*     <ul class="columns stack-list">
+*     <li><span class="u-pr">This is a list item</span> <a href="#" class="button button--tiny u-mb0 u-vbase u-vbase">.button--tiny u-mb0 u-vbase</a></li><li><span class="u-pr">This is a list item</span> <a href="#" class="button button--tiny u-mb0 u-vbase">.button--tiny u-mb0 u-vbase</a></li><li><span class="u-pr">This is a list item</span> <a href="#" class="button button--tiny u-mb0 u-vbase">.button--tiny u-mb0 u-vbase</a></li><li><span class="u-pr">This is a list item</span> <a href="#" class="button button--tiny u-mb0 u-vbase">.button--tiny u-mb0 u-vbase</a></li><li><span class="u-pr">This is a list item</span> <a href="#" class="button button--tiny u-mb0 u-vbase">.button--tiny u-mb0 u-vbase</a></li><li><span class="u-pr">This is a list item</span> <a href="#" class="button button--tiny u-mb0 u-vbase">.button--tiny u-mb0 u-vbase</a></li><li><span class="u-pr">This is a list item</span> <a href="#" class="button button--tiny u-mb0 u-vbase">.button--tiny u-mb0 u-vbase</a></li><li><span class="u-pr">This is a list item</span> <a href="#" class="button button--tiny u-mb0 u-vbase">.button--tiny u-mb0 u-vbase</a></li><li><span class="u-pr">This is a list item</span> <a href="#" class="button button--tiny u-mb0 u-vbase">.button--tiny u-mb0 u-vbase</a></li>
+*     </ul>
+*/
+
+.columns {
+-webkit-columns: 2 336px;
+     -moz-columns: 2 336px;
+          columns: 2 336px;
+  -webkit-column-gap: 2em;
+     -moz-column-gap: 2em;
+          column-gap: 2em;
+}
+
+.columns--slim {
+-webkit-columns: 2 160px;
+     -moz-columns: 2 160px;
+          columns: 2 160px;
+  -webkit-column-gap: 2em;
+     -moz-column-gap: 2em;
+          column-gap: 2em;
+}

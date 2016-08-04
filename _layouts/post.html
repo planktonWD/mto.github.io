@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html class="{{ page.title }} frontpage">
+
+{% include head/site-head.html %}
+
+<body>
+
+    {% include nav/trigger.html %}
+
+    {% include nav/nav.html %}
+
+ <div class="site-wrap clearfix">
+
+
+
+  	<div id="main" class="clearfix">
+
+
+
+	    {{ content }}
+
+    </div><!-- END #main -->
+
+    {% include footer/footer.html %}
+
+    <div class="overlay">
+
+    </div>
+
+</div><!-- END .page-wrap -->
+
+</body>
+
+</html>
