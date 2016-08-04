@@ -29,7 +29,7 @@ module.exports = function (grunt) {
                     //'assets/js/scripts/jquery.flexslider-custom.js',
                     //'assets/js/scripts/typed.js',
                     //'assets/js/scripts/jquery.fitvids.js',
-                    'assets/js/svg4everybody.min.js',
+                    'assets/js/scripts/svg4everybody.min.js',
                     'assets/js/scripts/main.js']
                 }
             }
